@@ -39,6 +39,14 @@ Es gibt keine externen Abhängigkeiten und keinen Build-Schritt.
 
 Für eine eigene Domain (z. B. `interior-coffee.com`) unter *Settings → Pages → Custom domain* eintragen und beim Domain-Anbieter einen CNAME auf `<benutzername>.github.io` setzen.
 
+## Cookies & Analyse
+
+Google Analytics (`G-DVK0M3BREL`) ist eingebunden, wird aber **erst nach Einwilligung** geladen. Beim ersten Besuch erscheint ein Hinweis unten auf der Seite; ohne Klick auf „einverstanden" wird kein Skript von Google geladen und kein Analyse-Cookie gesetzt. Die Entscheidung liegt im `localStorage` (`ic-consent`) und ist über den Footer-Link „Cookie-Einstellungen" jederzeit änderbar. Die Logik steckt in jeder HTML-Datei, eine separate Datei ist nicht nötig.
+
+## Vorbereitete Datenschutz-Abschnitte
+
+In `datenschutz.html` liegen drei Abschnitte bereit, die derzeit **nicht** angezeigt werden: Stripe und Substack. Sie werden erst gebraucht, wenn die Dienste tatsächlich im Einsatz sind — bis dahin bitte ausgeschaltet lassen. Freischalten geht nur über die Quelldatei im Design-Projekt, nicht in der exportierten HTML.
+
 ## Mobile
 
 Alle Seiten sind responsiv: Raster brechen ab ca. 780 px auf eine Spalte um, Schriftgrößen skalieren mit der Fensterbreite, Navigation und Footer laufen um. Getestet von 360 px bis 1920 px.
