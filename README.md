@@ -1,7 +1,7 @@
 # interior coffee — Website
 
 Statische Website von Jenny Kluth · interior coffee.
-Marketing. Branding. Content. Freshly brewed for lifestyle brands.
+Marketing. Branding. Content. Freshly brewed for lifestyle labels.
 
 ## Inhalt
 
