@@ -57,7 +57,7 @@
   /* Einstieg */
   .hero { padding-top: clamp(56px, 8vw, 96px); padding-bottom: clamp(40px, 5vw, 56px); display: flex; flex-direction: column; gap: 20px; }
   .hero h1 { max-width: 900px; font-size: clamp(38px, 6.4vw, 72px); line-height: 1.04; text-wrap: balance; }
-  .hero p { max-width: 620px; font-size: 18px; line-height: 1.55; text-wrap: pretty; }
+  .hero p { max-width: 680px; font-size: 18px; line-height: 1.55; text-wrap: balance; }
 
   /* Produktkarten */
   .products { padding-bottom: clamp(48px, 6vw, 72px); }
@@ -71,8 +71,8 @@
   .ticks { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
   .ticks li { display: flex; gap: 12px; align-items: baseline; font-size: 15px; line-height: 1.45; color: var(--ic-off-black); }
   .ticks svg { flex-shrink: 0; }
-  .flow { font-size: 14px; line-height: 1.5; color: var(--ic-ink-70); }
-  .flow span { font-weight: 500; color: var(--ic-off-black); }
+  .more summary span { color: var(--ic-off-black); }
+  .more .inner p.lead { font-weight: 500; color: var(--ic-off-black); }
   .more { border-top: 1px solid var(--ic-ink-12); border-bottom: 1px solid var(--ic-ink-12); }
   .more summary { display: flex; justify-content: space-between; align-items: center; min-height: 44px; padding: 10px 0; font-size: 14px; font-weight: 500; text-transform: lowercase; color: var(--ic-ink-70); }
   .more .inner { display: flex; flex-direction: column; gap: 10px; padding: 0 0 16px; }
@@ -163,7 +163,7 @@
 
 <main>
   <section class="wrap hero">
-    <span class="eyebrow">freshly brewed · markenblick</span>
+    <span class="eyebrow">markenblick · freshly brewed</span>
     <h1>damit deine marke auf jedem kanal unverkennbar bleibt.</h1>
     <p>Mit KI sind Texte und Bilder in Sekunden fertig. Nur sehen sie dann aus wie bei allen anderen. Mit dem Markenblick Studio wird die KI zu deiner Art-Direktorin für Wort und Bild. Beim Check nehme ich mir deine Marke selbst vor.</p>
   </section>
@@ -185,8 +185,9 @@
             <li><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#492F27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg>Anleitung für ChatGPT, Gemini oder Claude</li>
           </ul>
           <details class="more">
-            <summary>so funktioniert es<svg class="plus" aria-hidden="true" width="14" height="14" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 3v12M3 9h12"/></svg></summary>
+            <summary><span>kaufen · herunterladen · steckbrief ausfüllen</span><svg class="plus" aria-hidden="true" width="14" height="14" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 3v12M3 9h12"/></svg></summary>
             <div class="inner">
+              <p class="lead">Ab dann hat die KI dein Briefing.</p>
               <p>Du hältst einmal fest, wie deine Marke klingt, aussieht und was bei dir nie passiert. Daraus richtest du in ChatGPT, Gemini oder Claude eine Art-Direktorin ein, die jeden Text und jedes Bild an deiner Marke ausrichtet.</p>
             </div>
           </details>
@@ -215,10 +216,10 @@
             <li><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#492F27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg>drei Prompts und eine Audio-Zusammenfassung</li>
             <li><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#492F27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg>in der Regel 5 Werktage nach deinem Fragebogen</li>
           </ul>
-          <p class="flow"><span>buchen · fragebogen ausfüllen · kaffee trinken.</span> Den Rest mache ich.</p>
           <details class="more">
-            <summary>so funktioniert es<svg class="plus" aria-hidden="true" width="14" height="14" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 3v12M3 9h12"/></svg></summary>
+            <summary><span>buchen · fragebogen ausfüllen · kaffee trinken</span><svg class="plus" aria-hidden="true" width="14" height="14" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 3v12M3 9h12"/></svg></summary>
             <div class="inner">
+              <p class="lead">Den Rest mache ich.</p>
               <p>Ich nehme mir deinen Instagram-Auftritt und deine Website vor und prüfe Wirkung, Bildsprache, Texte und Wiedererkennung. Danach weißt du genau, wo deine Marke unscharf wird und was du als Nächstes änderst.</p>
               <p class="small">Ich schaue mir an: Instagram (Bio, Highlights, letzte 12 Beiträge) und Website (Startseite, Über uns, bei Shops eine Produktseite). Die Prompts sind für Text, Bildstil und deinen Marken-Steckbrief.</p>
             </div>
