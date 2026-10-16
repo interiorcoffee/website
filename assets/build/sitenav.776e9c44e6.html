@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/colors.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/typography.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/base.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/styles.css">
+<script src="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/_ds_bundle.js"></script>
+</helmet>
+<header style="position:sticky;top:0;z-index:40;background:rgba(236,235,227,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--ic-ink-12)">
+  <nav style="max-width:1280px;margin:0 auto;padding:18px clamp(20px,5vw,32px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="index.html" style="display:flex;align-items:center;gap:clamp(14px,1.8vw,22px);text-decoration:none;flex-shrink:0">
+      <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(18px,4vw,25px);letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-off-black)">interior coffee</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap">
+      <a href="leistungen.html" style="font-family:var(--font-sans);font-size:14px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;text-decoration:none;color:{{ cServices }};padding-bottom:2px;border-bottom:1px solid {{ uServices }}" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">leistungen</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">services</sc-if></a>
+      <sc-if value="{{ de }}" hint-placeholder-val="{{ true }}"><a href="markenblick.html" style="font-family:var(--font-sans);font-size:14px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;text-decoration:none;color:{{ cMarkenblick }};padding-bottom:2px;border-bottom:1px solid {{ uMarkenblick }}" style-hover="opacity:0.7">markenblick</a></sc-if>
+      <a href="projekte.html" style="font-family:var(--font-sans);font-size:14px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;text-decoration:none;color:{{ cWork }};padding-bottom:2px;border-bottom:1px solid {{ uWork }}" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">projekte</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">work</sc-if></a>
+      <a href="ueber-mich.html" style="font-family:var(--font-sans);font-size:14px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;text-decoration:none;color:{{ cAbout }};padding-bottom:2px;border-bottom:1px solid {{ uAbout }}" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">über mich</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">about</sc-if></a>
+      <a href="kontakt.html" style="font-family:var(--font-sans);font-size:14px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;text-decoration:none;color:{{ cContact }};padding-bottom:2px;border-bottom:1px solid {{ uContact }}" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">kontakt</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">contact</sc-if></a>
+      <div style="display:flex;align-items:center;gap:7px;padding-left:clamp(10px,2vw,22px);border-left:1px solid var(--ic-ink-12)">
+        <button type="button" onClick="{{ setDe }}" style="background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-sans);font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:{{ cDe }}">de</button>
+        <span style="font-size:11px;color:var(--ic-ink-30)">·</span>
+        <button type="button" onClick="{{ setEn }}" style="background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-sans);font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:{{ cEn }}">en</button>
+      </div>
+    </div>
+  </nav>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:80},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;de&quot;,&quot;en&quot;],&quot;default&quot;:&quot;de&quot;,&quot;tsType&quot;:&quot;'de'|'en'&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const lang = this.props.lang || 'de';
+    const de = lang === 'de';
+    const a = this.props.active || '';
+    const ink = 'var(--ic-off-black)';
+    const mid = 'var(--ic-ink-50)';
+    const on = (k) => a === k ? ink : mid;
+    const ul = (k) => a === k ? ink : 'transparent';
+    const set = (v) => () => {
+      try { localStorage.setItem('ic-lang', v); } catch (e) {}
+      window.dispatchEvent(new CustomEvent('ic-lang', { detail: v }));
+    };
+    return {
+      de, en: !de,
+      cServices: on('leistungen'), uServices: ul('leistungen'),
+      cWork: on('projekte'), uWork: ul('projekte'),
+      cMarkenblick: on('markenblick'), uMarkenblick: ul('markenblick'),
+      cAbout: on('about'), uAbout: ul('about'),
+      cContact: on('kontakt'), uContact: ul('kontakt'),
+      cDe: de ? ink : 'var(--ic-ink-30)',
+      cEn: de ? 'var(--ic-ink-30)' : ink,
+      setDe: set('de'), setEn: set('en')
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/colors.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/typography.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/tokens/base.css">
+<link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/styles.css">
+<script src="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/_ds_bundle.js"></script>
+</helmet>
+<footer style="background:var(--ic-off-black);color:var(--ic-linen);padding:96px clamp(20px,5vw,32px) 40px">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:48px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:420px">
+      <img src="assets/ic-mark-white.png" alt="" style="height:52px;width:auto;object-fit:contain;object-position:left;display:block;margin-bottom:4px">
+      <img src="assets/wordmark-white.png" alt="interior coffee" style="height:26px;width:auto;object-fit:contain;object-position:left;display:block">
+      <p style="margin:0;font-family:var(--font-sans);font-size:17px;line-height:1.45;color:var(--ic-paper-70);text-wrap:pretty">marketing. branding. content. <span style="display:block">freshly brewed for lifestyle labels.</span></p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ic-paper-50)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">seiten</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">pages</sc-if></span>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="leistungen.html" style="font-family:var(--font-sans);font-size:15px;text-transform:lowercase;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">leistungen</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">services</sc-if></a>
+        <sc-if value="{{ de }}" hint-placeholder-val="{{ true }}"><a href="markenblick.html" style="font-family:var(--font-sans);font-size:15px;text-transform:lowercase;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7">markenblick</a></sc-if>
+        <a href="projekte.html" style="font-family:var(--font-sans);font-size:15px;text-transform:lowercase;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">projekte</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">work</sc-if></a>
+        <a href="ueber-mich.html" style="font-family:var(--font-sans);font-size:15px;text-transform:lowercase;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">über mich</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">about</sc-if></a>
+        <a href="kontakt.html" style="font-family:var(--font-sans);font-size:15px;text-transform:lowercase;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">kontakt</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">contact</sc-if></a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ic-paper-50)">social</span>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="https://instagram.com/interior.coffee" target="_blank" rel="noopener" style="font-family:var(--font-sans);font-size:15px;text-transform:lowercase;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7">instagram</a>
+        <a href="https://tiktok.com/@interior.coffee" target="_blank" rel="noopener" style="font-family:var(--font-sans);font-size:15px;text-transform:lowercase;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7">tiktok</a>
+        <a href="https://www.linkedin.com/in/jenny-kluth-interior-coffee/" target="_blank" rel="noopener" style="font-family:var(--font-sans);font-size:15px;text-transform:lowercase;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7">linkedin</a>
+        <a href="https://pinterest.com/InteriorCoffee" target="_blank" rel="noopener" style="font-family:var(--font-sans);font-size:15px;text-transform:lowercase;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7">pinterest</a>
+        <a href="mailto:hello@interior-coffee.com" style="font-family:var(--font-sans);font-size:15px;color:var(--ic-linen);text-decoration:none" style-hover="opacity:0.7">hello@interior-coffee.com</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:72px auto 0;padding-top:24px;border-top:1px solid var(--ic-paper-14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <span style="font-family:var(--font-sans);font-size:12px;color:var(--ic-paper-50)">© 2026 jenny kluth · interior coffee</span>
+    <span style="display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-family:var(--font-sans);font-size:12px;color:var(--ic-paper-50)"><a href="impressum.html" style="color:var(--ic-paper-70);text-decoration:none" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">impressum</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">imprint</sc-if></a>·<a href="datenschutz.html" style="color:var(--ic-paper-70);text-decoration:none" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">datenschutz</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">privacy</sc-if></a>·<a href="agb.html" style="color:var(--ic-paper-70);text-decoration:none" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">agb</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">terms</sc-if></a>·<a href="#" onClick="{{ openConsent }}" style="color:var(--ic-paper-70);text-decoration:none" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">cookie-einstellungen</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">cookie settings</sc-if></a></span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:460},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;de&quot;,&quot;en&quot;],&quot;default&quot;:&quot;de&quot;,&quot;tsType&quot;:&quot;'de'|'en'&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const de = (this.props.lang || 'de') === 'de';
+    const openConsent = (e) => {
+      e.preventDefault();
+      if (typeof window.icOpenConsent === 'function') window.icOpenConsent();
+    };
+    return { de, en: !de, openConsent };
+  }
+}
+</script>
+</body>
+</html>

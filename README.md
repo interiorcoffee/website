@@ -17,7 +17,19 @@ Marketing. Branding. Content. Freshly brewed for lifestyle labels.
 | `datenschutz.html` | Datenschutzerklärung (DE/EN) |
 | `assets/` | Logos und Bilder |
 
-Schriften (CLASSICO, DM Sans), Styles und die Seitenbilder sind in die HTML-Dateien eingebettet. Der Ordner `assets/` muss mit hochgeladen werden — daraus laden Navigation und Footer die Logos.
+Bilder, Schriften und Scripts der Seiten liegen als eigene Dateien in `assets/build/`. Die Dateinamen enthalten einen Fingerabdruck (z. B. `img.5694a47eb9.webp`), damit Browser sie dauerhaft zwischenspeichern und nach einem Update automatisch die neue Version laden. Der Ordner `assets/` muss komplett mit hochgeladen werden.
+
+### Nach einem neuen Design-Export
+
+Exportierte Seiten kommen als gepacktes Bundle (eine einzige, sehr große HTML-Datei, die sich erst im Browser auspackt). Vor dem Hochladen einmal entpacken:
+
+```
+cd tools
+npm install
+node unbundle.mjs .. index.html
+```
+
+Den Dateinamen der exportierten Seite einsetzen. Das Skript schreibt Bilder (große Fotos als WebP, max. 2000 px breit), Schriften und Scripts nach `assets/build/` und ersetzt die Seite durch eine schlanke Version. Alte, nicht mehr verwendete Dateien in `assets/build/` dürfen gelöscht werden.
 
 ### assets/
 
@@ -29,7 +41,7 @@ Schriften (CLASSICO, DM Sans), Styles und die Seitenbilder sind in die HTML-Date
 | `logo-favvity.png`, `logo-jopiro.png`, `logo-codello.png` | Kundenlogos, freigestellt (transparent, Off Black) |
 | übrige Dateien | Projekt- und Stimmungsbilder |
 
-Es gibt keine externen Abhängigkeiten und keinen Build-Schritt.
+Die Website lädt keine externen Abhängigkeiten. Ein Build-Schritt ist nur nach einem neuen Design-Export nötig (siehe oben).
 
 ## Veröffentlichen mit GitHub Pages
 

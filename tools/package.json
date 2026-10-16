@@ -1,0 +1,12 @@
+{
+  "name": "interior-coffee-tools",
+  "private": true,
+  "type": "module",
+  "description": "Entpackt Design-Exporte (gebündelte HTML-Seiten) in schlanke Dateien mit komprimierten Bildern.",
+  "scripts": {
+    "unbundle": "node unbundle.mjs .."
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}
