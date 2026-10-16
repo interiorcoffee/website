@@ -18,8 +18,8 @@
 </helmet>
 <header style="position:sticky;top:0;z-index:40;background:rgba(236,235,227,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--ic-ink-12)">
   <nav style="max-width:1280px;margin:0 auto;padding:18px clamp(20px,5vw,32px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
-    <a href="index.html" style="display:flex;align-items:center;gap:clamp(14px,1.8vw,22px);text-decoration:none;flex-shrink:0">
-      <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,6vw,30px);letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-off-black)">interior coffee</span>
+    <a href="index.html" aria-label="interior coffee, Startseite" style="display:flex;align-items:center;gap:clamp(14px,1.8vw,22px);height:calc(clamp(24px,6vw,30px) * 1.4);text-decoration:none;flex-shrink:0">
+      <img src="/assets/wordmark.svg" alt="interior coffee" width="5735" height="788" style="display:block;height:clamp(18.9px,4.72vw,23.6px);width:auto">
     </a>
     <div style="display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap">
       <a href="leistungen.html" style="font-family:var(--font-sans);font-size:14px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;text-decoration:none;color:{{ cServices }};padding-bottom:2px;border-bottom:1px solid {{ uServices }}" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">leistungen</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">services</sc-if></a>

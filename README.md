@@ -37,7 +37,8 @@ Den Dateinamen der exportierten Seite einsetzen. Das Skript schreibt Bilder (gro
 |---|---|
 | `ic-mark.png` / `ic-mark-white.png` | **ic**-Monogramm, freigestellt (transparent) — Navigation |
 | `favicon.png`, `apple-touch-icon.png` | Browser-Tab / Homescreen — ic auf Linen |
-| `wordmark-white.png` / `wordmark-trim.png` | Wortmarke „interior coffee", freigestellt (Footer) |
+| `wordmark.svg` / `wordmark-linen.svg` | Wortmarke „interior coffee“ (gemeinsamer f Querstrich), Off Black für die Menüleiste, Linen für den Footer |
+| `wordmark-white.png` / `wordmark-trim.png` | bisheriger getippter Schriftzug, nicht mehr verwendet |
 | `logo-favvity.png`, `logo-jopiro.png`, `logo-codello.png` | Kundenlogos, freigestellt (transparent, Off Black) |
 | übrige Dateien | Projekt- und Stimmungsbilder |
 

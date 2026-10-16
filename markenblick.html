@@ -49,7 +49,8 @@
   /* Navigation */
   .nav { position: sticky; top: 0; z-index: 40; background: rgba(236,235,227,0.86); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--ic-ink-12); }
   .nav nav { max-width: 1280px; margin: 0 auto; padding: 18px var(--pad); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-  .nav .brand { font-family: var(--font-display); font-weight: 700; font-size: clamp(24px, 6vw, 30px); letter-spacing: -0.01em; text-transform: lowercase; color: var(--ic-off-black); flex-shrink: 0; }
+  .nav .brand { display: flex; align-items: center; height: calc(clamp(24px, 6vw, 30px) * 1.4); flex-shrink: 0; }
+  .nav .brand img { display: block; height: clamp(18.9px, 4.72vw, 23.6px); width: auto; }
   .nav .links { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 30px); flex-wrap: wrap; }
   .nav .links a { font-size: 14px; font-weight: 500; letter-spacing: 0.02em; text-transform: lowercase; color: var(--ic-ink-50); padding-bottom: 2px; border-bottom: 1px solid transparent; }
   .nav .links a[aria-current="page"] { color: var(--ic-off-black); border-bottom-color: var(--ic-off-black); }
@@ -132,7 +133,7 @@
   footer .cols { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; align-items: start; }
   footer .brandcol { display: flex; flex-direction: column; gap: 20px; max-width: 420px; }
   footer .brandcol img.mark { height: 52px; width: auto; object-fit: contain; object-position: left; margin-bottom: 4px; }
-  footer .brandcol img.word { height: 26px; width: auto; object-fit: contain; object-position: left; }
+  footer .brandcol img.word { height: 19px; width: auto; margin: 3.5px 0; align-self: flex-start; }
   footer .brandcol p { font-size: 17px; line-height: 1.45; color: var(--ic-paper-70); }
   footer .col { display: flex; flex-direction: column; gap: 14px; }
   footer .col .eyebrow { color: var(--ic-paper-50); }
@@ -150,7 +151,7 @@
 
 <header class="nav">
   <nav aria-label="Hauptnavigation">
-    <a class="brand" href="index.html">interior coffee</a>
+    <a class="brand" href="index.html" aria-label="interior coffee, Startseite"><img src="/assets/wordmark.svg" alt="interior coffee" width="5735" height="788"></a>
     <div class="links">
       <a href="leistungen.html">leistungen</a>
       <a href="markenblick.html" aria-current="page">markenblick</a>
@@ -285,7 +286,7 @@
   <div class="cols">
     <div class="brandcol">
       <img class="mark" src="assets/ic-mark-white.png" alt="">
-      <img class="word" src="assets/wordmark-white.png" alt="interior coffee">
+      <img class="word" src="/assets/wordmark-linen.svg" alt="interior coffee" width="5735" height="788">
       <p>marketing. branding. content. <span style="display:block">freshly brewed for lifestyle labels.</span></p>
     </div>
     <div class="col">
