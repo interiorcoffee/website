@@ -787,10 +787,16 @@ img { display: block; max-width: 100%; }
 <div style="background:var(--ic-linen);min-height:100vh">
   <dc-import name="_build_SiteNav" active="start" lang="{{ lang }}" hint-size="100%,80px"></dc-import>
 
-  <section style="position:relative;width:100%;height:min(88vh,900px);min-height:620px;overflow:hidden;background:var(--ic-off-black)">
-    <img src="assets/build/img.5694a47eb9.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;display:block">
-    <div style="position:absolute;inset:0;background:linear-gradient(100deg, rgba(28,28,28,0.78) 0%, rgba(28,28,28,0.62) 38%, rgba(28,28,28,0.18) 72%, rgba(28,28,28,0.05) 100%)"></div>
-    <div style="position:relative;height:100%;max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,32px);display:flex;flex-direction:column;justify-content:center;gap:26px">
+  <style>@media (max-width:700px){
+.hero-sec{height:auto!important;min-height:0!important}
+.hero-inner{height:auto!important;padding-top:72px!important;padding-bottom:72px!important}
+.hero-img{object-position:74% center!important}
+.hero-wash{background:linear-gradient(180deg, rgba(28,28,28,0.62) 0%, rgba(28,28,28,0.7) 55%, rgba(28,28,28,0.6) 100%)!important}
+}</style>
+  <section class="hero-sec" style="position:relative;width:100%;height:min(88vh,900px);min-height:620px;overflow:hidden;background:var(--ic-off-black)">
+    <img src="assets/build/img.c519dd6ef7.webp" fetchpriority="high" class="hero-img" alt="Espresso in handgetöpferter Tasse auf Beton" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% center;display:block">
+    <div class="hero-wash" style="position:absolute;inset:0;background:linear-gradient(100deg, rgba(28,28,28,0.72) 0%, rgba(28,28,28,0.5) 36%, rgba(28,28,28,0.08) 62%, rgba(28,28,28,0) 100%)"></div>
+    <div class="hero-inner" style="position:relative;height:100%;max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,32px);display:flex;flex-direction:column;justify-content:center;gap:26px">
       <span style="font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ic-paper-70)">jenny kluth · freelance</span>
       <h1 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(40px,5.4vw,76px);line-height:1.0;letter-spacing:-0.015em;text-transform:lowercase;color:var(--ic-linen)">marketing.<br>branding.<br>content.</h1>
       <p style="margin:0;font-family:var(--font-sans);font-size:clamp(20px,2.8vw,24px);line-height:1.3;color:var(--ic-linen);opacity:0.92">freshly brewed for lifestyle labels.</p>
