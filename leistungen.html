@@ -843,12 +843,11 @@ img { display: block; max-width: 100%; }
       <div style="display:flex;gap:18px;align-items:baseline"><span style="font-family:var(--font-sans);font-size:13px;letter-spacing:0.1em;color:var(--ic-ink-30)">04</span>
       <h2 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(26px,4vw,34px);line-height:1.1;letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-off-black)">social media &amp; content</h2></div>
       <div style="display:flex;flex-direction:column;gap:18px">
-        <sc-if value="{{ de }}" hint-placeholder-val="{{ true }}"><p style="margin:0;font-family:var(--font-sans);font-size:17px;line-height:1.55;color:var(--ic-ink-70);text-wrap:pretty">Redaktionsplan, Produktion, Community. Ich weiß, wie Content aussieht, der im Feed nicht wie Werbung wirkt.</p></sc-if>
-        <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font-family:var(--font-sans);font-size:17px;line-height:1.55;color:var(--ic-ink-70);text-wrap:pretty">Editorial planning, production, community. I know what content looks like when it doesn't read as an ad in the feed, because I make it every day for interior coffee.</p></sc-if>
+        <sc-if value="{{ de }}" hint-placeholder-val="{{ true }}"><p style="margin:0;font-family:var(--font-sans);font-size:17px;line-height:1.55;color:var(--ic-ink-70);text-wrap:pretty">Redaktionsplan, Produktion, Reels und Beiträge. Ich weiß, wie Content aussieht, der im Feed nicht wie Werbung wirkt.</p></sc-if>
+        <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font-family:var(--font-sans);font-size:17px;line-height:1.55;color:var(--ic-ink-70);text-wrap:pretty">Editorial plan, production, reels and posts. I know what content looks like when it doesn't read as an ad in the feed, because I make it every day for interior coffee.</p></sc-if>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
           <span style="display:inline-flex;padding:5px 13px;border:1px solid var(--ic-ink-12);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;font-weight:500;text-transform:lowercase;color:var(--ic-ink-70)">redaktionsplan</span>
-          <span style="display:inline-flex;padding:5px 13px;border:1px solid var(--ic-ink-12);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;font-weight:500;text-transform:lowercase;color:var(--ic-ink-70)">reels &amp; foto</span>
-          <span style="display:inline-flex;padding:5px 13px;border:1px solid var(--ic-ink-12);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;font-weight:500;text-transform:lowercase;color:var(--ic-ink-70)">community</span>
+          <span style="display:inline-flex;padding:5px 13px;border:1px solid var(--ic-ink-12);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;font-weight:500;text-transform:lowercase;color:var(--ic-ink-70)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">reels &amp; beiträge</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">reels &amp; posts</sc-if></span>
         </div>
       </div>
     </div>
@@ -865,25 +864,31 @@ img { display: block; max-width: 100%; }
       </div>
       <div style="display:flex;flex-direction:column">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:32px;padding:26px 0;border-top:1px solid var(--ic-paper-14)">
-          <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.8vw,24px);letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-linen)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">strategie-sprint</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">strategy sprint</sc-if></span>
-          <span style="font-family:var(--font-sans);font-size:17px;color:var(--ic-paper-70);white-space:nowrap"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">ab 590 €</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">from €590</sc-if></span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:32px;padding:26px 0;border-top:1px solid var(--ic-paper-14)">
           <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.8vw,24px);letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-linen)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">einzelner baustein</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">single building block</sc-if></span>
-          <span style="font-family:var(--font-sans);font-size:17px;color:var(--ic-paper-70);white-space:nowrap"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">ab 1.200 €</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">from €1,200</sc-if></span>
+          <span style="font-family:var(--font-sans);font-size:17px;color:var(--ic-paper-70);white-space:nowrap;font-variant-numeric:tabular-nums"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">ab 1.200 €</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">from €1,200</sc-if></span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:32px;padding:26px 0;border-top:1px solid var(--ic-paper-14)">
-          <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.8vw,24px);letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-linen)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">markenaufbau komplett</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">full brand build</sc-if></span>
-          <span style="font-family:var(--font-sans);font-size:17px;color:var(--ic-paper-70);white-space:nowrap"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">ab 3.500 €</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">from €3,500</sc-if></span>
+          <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.8vw,24px);letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-linen)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">monatliche begleitung</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">ongoing support</sc-if></span>
+          <span style="font-family:var(--font-sans);font-size:17px;color:var(--ic-paper-70);white-space:nowrap;font-variant-numeric:tabular-nums"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">ab 2.200 € / monat</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">from €2,200 / month</sc-if></span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:32px;padding:26px 0;border-top:1px solid var(--ic-paper-14);border-bottom:1px solid var(--ic-paper-14)">
-          <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.8vw,24px);letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-linen)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">content-betreuung</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">ongoing content</sc-if></span>
-          <span style="font-family:var(--font-sans);font-size:17px;color:var(--ic-paper-70);white-space:nowrap"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">ab 1.200 € / monat</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">from €1,200 / month</sc-if></span>
+          <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.8vw,24px);letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-linen)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">tagessatz</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">day rate</sc-if></span>
+          <span style="font-family:var(--font-sans);font-size:17px;color:var(--ic-paper-70);white-space:nowrap;font-variant-numeric:tabular-nums"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">690 €</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">€690</sc-if></span>
         </div>
-        <span style="margin-top:20px;font-family:var(--font-sans);font-size:13px;color:var(--ic-paper-50)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Alle Preise netto, zzgl. Produktionskosten.</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">All prices net, production costs not included.</sc-if></span>
+        <span style="margin-top:20px;font-family:var(--font-sans);font-size:13px;line-height:1.55;color:var(--ic-paper-50)"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Der Tagessatz gilt für 8 Stunden an einem Tag. Alle Preise netto, zzgl. Produktionskosten.</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">The day rate covers 8 hours on one day. All prices net, production costs not included.</sc-if></span>
         <a href="kontakt.html" style="align-self:flex-start;margin-top:32px;display:inline-flex;align-items:center;padding:14px 26px;border-radius:var(--radius-md);background:var(--ic-linen);color:var(--ic-off-black);font-family:var(--font-sans);font-size:15px;font-weight:500;text-transform:lowercase;text-decoration:none" style-hover="opacity:0.82"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">projekt anfragen</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">start a project</sc-if></a>
       </div>
     </div>
+    <sc-if value="{{ de }}" hint-placeholder-val="{{ true }}"><div style="max-width:1280px;margin:72px auto 0;padding-top:32px;border-top:1px solid var(--ic-paper-14);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:48px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+        <span style="font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ic-paper-50)">einstieg</span>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px"><h3 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(24px,3.4vw,30px);letter-spacing:-0.01em;text-transform:lowercase;color:var(--ic-linen)">markenblick check</h3><span style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,3.4vw,30px);color:var(--ic-linen);white-space:nowrap">290 €</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+        <p style="margin:0;font-family:var(--font-sans);font-size:17px;line-height:1.55;color:var(--ic-paper-70);text-wrap:pretty">Erst einmal schauen, wie ich arbeite? Mit dem Markenblick Check füllst du einen Fragebogen aus und bekommst eine schriftliche Einschätzung deiner Marke mit Audio-Zusammenfassung, ganz ohne Termin. Der Preis versteht sich inkl. MwSt.</p>
+        <p style="margin:0;font-family:var(--font-sans);font-size:17px;line-height:1.55"><a href="markenblick.html#check" style="color:var(--ic-linen);text-decoration:underline;text-underline-offset:3px" style-hover="opacity:0.82">mehr dazu und buchen</a></p>
+      </div>
+    </div></sc-if>
   </section>
 
   <dc-import name="_build_SiteFooter" lang="{{ lang }}" hint-size="100%,460px"></dc-import>
