@@ -10,7 +10,7 @@ Marketing. Branding. Content. Freshly brewed for lifestyle labels.
 | `index.html` | Startseite (Hero-Banner, Leistungen, Projekte, Kurzvorstellung) |
 | `leistungen.html` | Die vier Bausteine + Preisorientierung |
 | `markenblick.html` | Angebotsseite Markenblick Studio und Markenblick Check (nur Deutsch, statisches HTML, Schriften aus `assets/fonts/`) |
-| `projekte.html` | Favvity, JoPiRo, CODELLO, Branding-Projekte |
+| `projekte.html` | Projekte CODELLO, FAVVITY, JoPiRo, Branding (statisches HTML, DE/EN, Bilder in `assets/projekte/`) |
 | `ueber-mich.html` | Über Jenny, Arbeitsweise, interior coffee |
 | `kontakt.html` | E-Mail und Social-Kanäle |
 | `impressum.html` | Impressum (DE/EN) |
