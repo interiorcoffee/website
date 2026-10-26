@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://www.interior-coffee.com/projekte.html">
 <meta property="og:title" content="Projekte · interior coffee">
 <meta property="og:description" content="Ausgewählte Projekte von interior coffee: Kampagnenkonzept für CODELLO, Shooting und Social für FAVVITY, B2B-Landingpage für JoPiRo und Branding für kleine Marken.">
-<meta property="og:image" content="https://www.interior-coffee.com/assets/projekte/codello-landingpage.webp">
+<meta property="og:image" content="https://www.interior-coffee.com/assets/projekte/codello-haarreif.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -72,7 +72,6 @@
   footer .bottom { max-width: 1280px; margin: 72px auto 0; padding-top: 24px; border-top: 1px solid var(--ic-paper-14); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12px; color: var(--ic-paper-50); }
   footer .bottom .legal { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
   footer .bottom a { color: var(--ic-paper-70); }
-
 
   .nav .lang { display: flex; align-items: center; gap: 7px; padding-left: clamp(10px,2vw,22px); border-left: 1px solid var(--ic-ink-12); }
   .nav .lang button { background: none; border: 0; padding: 0; cursor: pointer; font-family: var(--font-sans); font-size: 12px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--ic-ink-50); }
@@ -261,7 +260,42 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 /* projektkopf */
 .sub-head h3.sh { margin: 0; font-family: var(--font-sans); font-weight: 600; font-size: 17px; letter-spacing: 0; text-transform: lowercase; color: var(--fg); }
 .lead-q { margin: 0; font-size: 19px; line-height: 1.5; color: var(--fg); max-width: 36em; }
+
 .band h2 { color: var(--fg); }
+
+/* gesamtbild-feedback */
+.toc .wrap { padding-block: 8px 104px; }
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 20px; align-items: start; }
+.toc a.tile { display: flex; flex-direction: column; gap: 12px; padding: 0; border: 0; color: var(--fg); }
+.toc a.tile:hover { padding-left: 0; color: var(--fg); opacity: 1; }
+.tile:nth-child(even) { margin-top: 48px; }
+.tile .ph { aspect-ratio: 4/5; }
+.tile:hover .ph img { transform: scale(1.03); }
+.tile .t-meta { display: flex; gap: 10px; align-items: baseline; margin-top: 4px; }
+.tile .no { font-family: var(--font-display); font-size: 15px; color: var(--accent); letter-spacing: 0; }
+.tile .nm { font-family: var(--font-display); font-weight: 700; font-size: clamp(20px,2vw,24px); line-height: 1.1; text-transform: lowercase; }
+.tile .ct { font-size: 13px; color: var(--muted); text-transform: lowercase; text-align: left; display: block; }
+.hero.wide { grid-template-columns: minmax(0,8fr) minmax(0,4fr); align-items: end; }
+.hero.wide .duo { gap: 20px; }
+.foot-row { position: relative; }
+.foot-row > .offer { position: absolute; right: 0; top: 14px; }
+.sprint-sec .wrap { padding-block: clamp(64px,8vw,104px); }
+.sprint-card { background: #FFFFFF; box-shadow: var(--shadow-media); border-radius: 22px; padding: clamp(28px,5vw,56px); display: flex; flex-direction: column; gap: 20px; max-width: 900px; }
+.sprint-card h3.d { font-size: clamp(24px,3vw,34px); line-height: 1.15; max-width: 22em; }
+.sprint-card .offer { margin-top: 8px; }
+@media (max-width: 900px) {
+  .tiles { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .tile:nth-child(even) { margin-top: 32px; }
+  .hero.wide { grid-template-columns: minmax(0,1fr); }
+  .foot-row > .offer { position: static; display: inline-flex; margin-top: 12px; }
+}
+
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; align-items: start; }
+.gallery .ph { aspect-ratio: 4/5; }
+.gallery .ph:nth-child(even) { margin-top: 28px; }
+@media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, minmax(0,1fr)); } .gallery .ph:nth-child(even) { margin-top: 20px; } }
+.foot-row.end { display: flex; justify-content: flex-end; }
+.foot-row.end > .offer { position: static; }
 </style>
 </head>
 <body>
@@ -289,12 +323,12 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
   <p><span class="de">Unterschiedliche Branchen, gleicher Anspruch. Strategie, Visuals und Texte, die zusammen etwas auslösen.</span><span class="en">Different industries, same standard. Strategy, visuals and copy that work together to move people.</span></p>
 </div></section>
 
-<nav class="toc band" aria-label="Projekte"><div class="wrap"><ol>
-  <li><a href="#codello"><span class="no">01</span><span class="nm">codello</span><span class="ct"><span class="de">accessoires · kampagnenkonzept</span><span class="en">accessories · campaign concept</span></span></a></li>
-  <li><a href="#favvity"><span class="no">02</span><span class="nm">favvity</span><span class="ct"><span class="de">wassersport &amp; lifestyle · shooting &amp; social</span><span class="en">watersports &amp; lifestyle · shoot &amp; social</span></span></a></li>
-  <li><a href="#jopiro"><span class="no">03</span><span class="nm">jopiro</span><span class="ct"><span class="de">wein · b2b landingpage</span><span class="en">wine · b2b landing page</span></span></a></li>
-  <li><a href="#branding"><span class="no">04</span><span class="nm"><span class="de">branding für kleine marken</span><span class="en">branding for small brands</span></span><span class="ct"><span class="de">gründer &amp; labels · brand sprint</span><span class="en">founders &amp; labels · brand sprint</span></span></a></li>
-</ol></div></nav>
+<nav class="toc band" aria-label="Projekte"><div class="wrap"><div class="tiles">
+    <a class="tile" href="#codello"><div class="ph"><img src="assets/projekte/codello-haarreif.webp" alt="" style="object-position:50% 55%"></div><span class="t-meta"><span class="no">01</span><span class="nm">codello</span></span><span class="ct"><span class="de">accessoires · kampagnenkonzept</span><span class="en">accessories · campaign concept</span></span></a>
+    <a class="tile" href="#favvity"><div class="ph"><img src="assets/projekte/favvity-2.webp" alt=""></div><span class="t-meta"><span class="no">02</span><span class="nm">favvity</span></span><span class="ct"><span class="de">wassersport &amp; lifestyle · shooting &amp; social</span><span class="en">watersports &amp; lifestyle · shoot &amp; social</span></span></a>
+    <a class="tile" href="#jopiro"><div class="ph"><img src="assets/projekte/jopiro-1.webp" alt=""></div><span class="t-meta"><span class="no">03</span><span class="nm">jopiro</span></span><span class="ct"><span class="de">wein · b2b landingpage</span><span class="en">wine · b2b landing page</span></span></a>
+    <a class="tile" href="#social-bagel-club"><div class="ph"><img src="assets/projekte/bagel-frischkaese.webp" alt=""></div><span class="t-meta"><span class="no">04</span><span class="nm">social bagel club</span></span><span class="ct"><span class="de">gastronomie · branding</span><span class="en">hospitality · branding</span></span></a>
+  </div></div></nav>
 
 
 
@@ -311,39 +345,44 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     
     <div class="hero">
       <figure class="piece">
-        <div class="ph" style="aspect-ratio:16/10"><img src="assets/projekte/codello-landingpage.webp" alt="codello landingpage traditional kapsel" style="object-position:left top"></div>
-        <p class="cap "><i><span class="de">kampagnenkonzept</span><span class="en">campaign concept</span></i><span><span class="de">Ein Baustein daraus: die Landingpage, gebaut aus vorhandenen Shooting-Motiven.</span><span class="en">One piece of it: the landing page, built from existing shoot images.</span></span></p>
+        <div class="ph" style="aspect-ratio:1214/868"><img src="assets/projekte/codello-lp-haarreif.webp" alt="codello landingpage traditional kapsel mit haarreif und tuch"></div>
+        <p class="cap "><i><span class="de">kampagnenkonzept</span><span class="en">campaign concept</span></i><span><span class="de">Die Gestaltung einer Landingpage als ein Teil des Konzepts, das über alle Kanäle lief.</span><span class="en">The design of a landing page as one part of a concept that ran across every channel.</span></span></p>
       </figure>
       <div class="side-txt">
         <div class="role"><span class="lbl" style="margin:0"><span class="de">meine rolle</span><span class="en">my role</span></span><p><span class="de">Struktur für die neue Traditional-Kapsel und ein Kampagnenkonzept, das die Ideen aller Teams auf jeden Kanal bringt.</span><span class="en">Structure for the new Traditional capsule and a campaign concept that takes every team's ideas onto every channel.</span></p></div>
         <div class="figures" style="justify-content:flex-start"><div><strong>+30 %</strong><span><span class="de">gesamtumsatz in 5 wochen</span><span class="en">total revenue over 5 weeks</span></span></div><div><strong>+91 %</strong><span><span class="de">umsatz über instagram</span><span class="en">revenue via instagram</span></span></div></div>
       </div>
     </div>
+    <div class="foot-row">
     <details class="foot" id="more-codello">
     <summary><span class="pl" aria-hidden="true">+</span><span class="de">mehr zum projekt</span><span class="en">more about the project</span></summary>
     <div class="panel">
-      <div class="ctx"><div><span class="lbl"><span class="de">ausgangslage</span><span class="en">the starting point</span></span><p><span class="de">Die neue Traditional-Kapsel brauchte ein Kampagnenkonzept. Online, PR und Social hatten eigene Ideen, aber noch keine gemeinsame Geschichte.</span><span class="en">The new Traditional capsule needed a campaign concept. Online, PR and social had their own ideas, but no shared story yet.</span></p></div><div><span class="lbl"><span class="de">ergebnis</span><span class="en">the result</span></span><p><span class="de">Die Kapsel war live, bevor die meisten Herbst-Winter-Kollektionen starteten. In den 5 Wochen nach dem Start lag der Gesamtumsatz 30 % über den Wochen davor, der Umsatz über Instagram sogar 91 %. Auch die Instagram-Ads waren mitgedacht, mit Visuals und Texten direkt aus dem Konzept.</span><span class="en">The capsule went live before most autumn and winter collections. In the 5 weeks after launch, total revenue was 30 % above the previous weeks, and revenue via Instagram 91 %. Even the Instagram ads were built in, with visuals and copy straight from the concept.</span></p></div></div>
-      <div class="did"><span class="lbl"><span class="de">was ich gemacht habe</span><span class="en">what i did</span></span><ol class="de"><li>Kampagnenstruktur für die Traditional-Kapsel</li><li>Konzept, das alle Kanäle trägt</li><li>Eine Linie für die Ideen aus Online, PR und Social</li><li>Landingpage aus vorhandenen Shooting-Motiven</li></ol><ol class="en"><li>Campaign structure for the Traditional capsule</li><li>A concept that carries every channel</li><li>One storyline for the ideas from online, PR and social</li><li>Landing page from existing shoot images</li></ol></div>
+      <div class="ctx"><div><span class="lbl"><span class="de">ausgangslage</span><span class="en">the starting point</span></span><p><span class="de">Die neue Traditional-Kapsel brauchte ein Kampagnenkonzept. Online, PR und Social hatten eigene Ideen, aber noch keine gemeinsame Geschichte.</span><span class="en">The new Traditional capsule needed a campaign concept. Online, PR and social had their own ideas, but no shared story yet.</span></p></div><div><span class="lbl"><span class="de">ergebnis</span><span class="en">the result</span></span><p><span class="de">Die Kapsel war für die Trachtensaison entwickelt und sollte auch darüber hinaus tragen. Die Kampagne dazu lief gezielt von Ende August bis Anfang Oktober, über alle Kanäle und noch vor den meisten Herbst-Winter-Kollektionen. In den ersten 5 Wochen lag der Gesamtumsatz 30 % über den Wochen davor, der Umsatz über Instagram sogar 91 %. Auch die Instagram-Ads waren mitgedacht, mit Visuals und Texten direkt aus dem Konzept.</span><span class="en">The capsule was designed for the traditional costume season and meant to last beyond it. Its campaign ran from the end of August to early October, across every channel and ahead of most autumn and winter collections. In the first 5 weeks, total revenue was 30 % above the previous weeks, and revenue via Instagram 91 %. Even the Instagram ads were built in, with visuals and copy straight from the concept.</span></p></div></div>
+      <div class="did"><span class="lbl"><span class="de">was ich gemacht habe</span><span class="en">what i did</span></span><ol class="de"><li>Kampagnenstruktur für die Traditional-Kapsel</li><li>Konzept, das alle Kanäle trägt</li><li>Eine Linie für die Ideen aus Online, PR und Social</li><li>Gestaltung der Landingpage</li><li>Redaktionsplan für Social Media</li><li>Beiträge und Reels, geplant und aus vorhandenem Bild- und Videomaterial geschnitten</li><li>Planung der Gewinnspiele auf Social Media</li></ol><ol class="en"><li>Campaign structure for the Traditional capsule</li><li>A concept that carries every channel</li><li>One storyline for the ideas from online, PR and social</li><li>Design of the landing page</li><li>Social media editorial plan</li><li>Posts and reels, planned and edited from existing photo and video material</li><li>Planning of the social media giveaways</li></ol></div>
       <div class="core"><span class="lbl"><span class="de">die kernidee</span><span class="en">the core idea</span></span><q><span class="de">Eine Idee muss über viele Kanäle funktionieren. Newsletter, PR, Online und Social erzählen deshalb dieselbe Geschichte.</span><span class="en">One idea has to work across many channels. That's why newsletter, PR, online and social tell the same story.</span></q></div>
     </div>
   </details>
+    </div>
   </div>
 
   <div class="sub">
     
     <div class="hero">
-      <div class="trio">
-        <div class="ph"><img src="assets/projekte/codello-teddy-1.webp" alt="codello weihnachten ki visual teddy mit tuch"></div>
-        <div class="ph"><img src="assets/projekte/codello-valentin.webp" alt="codello valentinstag ki visual geschenk mit tuch als schleife"></div>
-        <div class="ph"><img src="assets/projekte/codello-ostern.webp" alt="codello ostern ki visual eierkarton"></div>
-      </div>
+      <figure class="piece">
+        <div class="trio">
+          <div class="ph"><img src="assets/projekte/codello-turban.webp" alt="codello sommer ki visual tuch als turban am meer"></div>
+          <div class="ph"><img src="assets/projekte/codello-set.webp" alt="codello herbst ki visual cap tasche und socken"></div>
+          <div class="ph"><img src="assets/projekte/codello-teddy-1.webp" alt="codello weihnachten ki visual teddy mit tuch"></div>
+        </div>
+        <p class="cap"><i><span class="de">ki visuals für social media und onlineshop</span><span class="en">ai visuals for social media and online shop</span></i><span><span class="de">Saisonale Bildwelten vom Sommerurlaub am Meer über den Herbst bis Weihnachten.</span><span class="en">Seasonal visual worlds from summer holidays by the sea to autumn and Christmas.</span></span></p>
+      </figure>
       <div class="side-txt">
-        <div class="role"><span class="lbl" style="margin:0"><span class="de">meine rolle</span><span class="en">my role</span></span><p><span class="de">Gestaltung saisonaler KI-Visuals für Social Media und den Onlineshop, frisch gebrüht und immer im Look der Marke.</span><span class="en">Seasonal AI visuals for social media and the online shop, freshly brewed and always in the brand's look.</span></p></div>
-        <p class="note"><span class="de">Weihnachten, Valentinstag, Ostern: Jeder Anlass bekommt einen eigenen Moment rund um das Tuch, der Lust aufs Schenken und Tragen macht. Dazu kommen Newsletter und Moodboards für saisonale Themen.</span><span class="en">Christmas, Valentine's Day, Easter: every occasion gets its own moment around the scarf, one that makes you want to gift it and wear it. Plus newsletters and moodboards for seasonal themes.</span></p>
+        <div class="role"><span class="lbl" style="margin:0"><span class="de">meine rolle</span><span class="en">my role</span></span><p><span class="de">Bildideen für jeden Anlass, mit KI frisch gebrüht und immer im Look der Marke.</span><span class="en">Image ideas for every occasion, freshly brewed with AI and always in the brand's look.</span></p></div>
+        <p class="note"><span class="de">Jeder Anlass bekommt einen eigenen Moment rund um die Accessoires, der Lust aufs Schenken und Tragen macht. Dazu kommen Newsletter und Moodboards für saisonale Themen.</span><span class="en">Every occasion gets its own moment around the accessories, one that makes you want to gift them and wear them. Plus newsletters and moodboards for seasonal themes.</span></p>
       </div>
     </div>
+    <div class="foot-row end"><a class="offer" href="leistungen.html#preise"><span class="de">mehr über die brand begleitung</span><span class="en">more about ongoing support</span><span class="ar">→</span></a></div>
   </div>
-  <a class="offer" href="leistungen.html#preise"><span class="de">mehr über die brand begleitung</span><span class="en">more about ongoing support</span><span class="ar">→</span></a>
 </div></section>
 
 <section class="chapter band olive" id="favvity"><div class="wrap">
@@ -355,6 +394,7 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     <div class="tags"><span>art direction</span><span><span class="de">konzept &amp; kreation</span><span class="en">concept &amp; creation</span></span><span><span class="de">social media strategie</span><span class="en">social media strategy</span></span></div>
   </header>
 
+  <div class="hero wide">
   <div class="duo">
     <figure class="piece">
       <div class="ph" style="aspect-ratio:3/4"><img src="assets/projekte/favvity-1.webp" alt="favvity balance board shooting lifestyle"></div>
@@ -365,9 +405,10 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
       <p class="cap "><i><span class="de">content für instagram</span><span class="en">content for instagram</span></i><span><span class="de">Aus dem Material entstanden Beiträge und Reels für Instagram.</span><span class="en">The footage became posts and reels for Instagram.</span></span></p>
     </figure>
   </div>
+    <div class="side-txt"><div class="role"><span class="lbl" style="margin:0"><span class="de">meine rolle</span><span class="en">my role</span></span><p><span class="de">Shootingkonzept und Art Direction am Set, danach die Social-Media-Strategie mit den 3 Gründern im Mittelpunkt.</span><span class="en">Shoot concept and art direction on set, then a social media strategy centred on the 3 founders.</span></p></div></div>
+  </div>
 
-  <div class="summary solo"><div class="role"><span class="lbl" style="margin:0"><span class="de">meine rolle</span><span class="en">my role</span></span><p><span class="de">Shootingkonzept und Art Direction am Set, danach die Social-Media-Strategie mit den 3 Gründern im Mittelpunkt.</span><span class="en">Shoot concept and art direction on set, then a social media strategy centred on the 3 founders.</span></p></div></div>
-
+  <div class="foot-row">
   <details class="foot" id="more-favvity">
     <summary><span class="pl" aria-hidden="true">+</span><span class="de">mehr zum projekt</span><span class="en">more about the project</span></summary>
     <div class="panel">
@@ -377,6 +418,7 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     </div>
   </details>
   <a class="offer" href="leistungen.html#bausteine"><span class="de">so arbeite ich in einzelnen projekten</span><span class="en">how i work on individual projects</span><span class="ar">→</span></a>
+  </div>
 </div></section>
 
 <section class="chapter band" id="jopiro"><div class="wrap">
@@ -388,15 +430,17 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     <div class="tags"><span><span class="de">design &amp; text</span><span class="en">design &amp; copy</span></span><span><span class="de">landingpage</span><span class="en">landing page</span></span><span>b2b</span></div>
   </header>
 
+  <div class="hero wide">
   <div class="pair">
     <div class="main ph" style="aspect-ratio:16/11"><img src="assets/projekte/jopiro-landingpage.webp" alt="jopiro landingpage für einkäufer" style="object-position:left top"></div>
     <div class="side ph" style="aspect-ratio:1/1"><img src="assets/projekte/jopiro-1.webp" alt="jopiro weinflaschen auf sideboard"></div>
     <p class="cap c1"><i><span class="de">landingpage</span><span class="en">landing page</span></i><span><span class="de">Argumente in der Reihenfolge, in der Gastronomen entscheiden.</span><span class="en">Arguments in the order restaurateurs decide.</span></span></p>
     <p class="cap c2"><i><span class="de">produktinszenierung</span><span class="en">product styling</span></i><span><span class="de">So wirkt der Wein auf dem Tisch und im Regal.</span><span class="en">How the wine looks on the table and on the shelf.</span></span></p>
   </div>
+    <div class="side-txt"><div class="role"><span class="lbl" style="margin:0"><span class="de">meine rolle</span><span class="en">my role</span></span><p><span class="de">Gestaltung, Text und technische Umsetzung der Landingpage, alles aus einer Hand.</span><span class="en">Design, copy and build of the landing page, all under one roof.</span></p></div></div>
+  </div>
 
-  <div class="summary solo"><div class="role"><span class="lbl" style="margin:0"><span class="de">meine rolle</span><span class="en">my role</span></span><p><span class="de">Gestaltung, Text und technische Umsetzung der Landingpage, alles aus einer Hand.</span><span class="en">Design, copy and build of the landing page, all under one roof.</span></p></div></div>
-
+  <div class="foot-row">
   <details class="foot" id="more-jopiro">
     <summary><span class="pl" aria-hidden="true">+</span><span class="de">mehr zum projekt</span><span class="en">more about the project</span></summary>
     <div class="panel">
@@ -406,36 +450,50 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     </div>
   </details>
   <a class="offer" href="leistungen.html#bausteine"><span class="de">so arbeite ich in einzelnen projekten</span><span class="en">how i work on individual projects</span><span class="ar">→</span></a>
+  </div>
 </div></section>
 
-<section class="chapter band deep" id="branding"><div class="wrap">
+<section class="chapter band deep" id="social-bagel-club"><div class="wrap">
   <header class="ch-head">
     <div>
-      <div class="meta"><span class="no">04</span><span class="eyebrow"><span class="de">gründer &amp; labels</span><span class="en">founders &amp; labels</span></span></div>
-      <h2><span class="de">branding für kleine marken</span><span class="en">branding for small brands</span></h2>
+      <div class="meta"><span class="no">04</span><span class="eyebrow"><span class="de">gastronomie · branding</span><span class="en">hospitality · branding</span></span></div>
+      <h2>social bagel club</h2>
     </div>
-    <div class="tags"><span><span class="de">branding &amp; positionierung</span><span class="en">branding &amp; positioning</span></span></div>
+    <div class="tags"><span><span class="de">branding &amp; positionierung</span><span class="en">branding &amp; positioning</span></span><span><span class="de">konzept &amp; kreation</span><span class="en">concept &amp; creation</span></span><span>social media &amp; content</span></div>
   </header>
 
-  <div class="sub">
-    <div class="strip">
+  <div class="strip">
     <div class="ph"><img src="assets/projekte/bagel-frischkaese.webp" alt="social bagel club coming soon post mit frischkäse-bagel"></div>
     <div class="ph"><img src="assets/projekte/bagel-himmel.webp" alt="social bagel club coming soon post, bagel vor blauem himmel"></div>
     <div class="ph"><img src="assets/projekte/bagel-schon-gewusst.webp" alt="social bagel club karussell schon gewusst"></div>
     <div class="ph"><img src="assets/projekte/bagel-sauerteig.webp" alt="social bagel club karussell sauerteig macht sexy"></div>
-  </div>
-    <p class="cap"><i>social bagel club</i><span><span class="de">Bagelladen in Ulm: Moodboard für Farben und Ladengestaltung, dazu Shooting, Typo und Posts zur Eröffnung.</span><span class="en">Bagel shop in Ulm: moodboard for colours and shop design, plus shoot, type and posts for the opening.</span></span></p>
+    </div>
+
+  <div class="summary">
+    <p class="cap"><i><span class="de">posts zur eröffnung</span><span class="en">opening posts</span></i><span><span class="de">Coming soon Posts und Karussells für den Bagelladen in Ulm.</span><span class="en">Coming soon posts and carousels for the bagel shop in Ulm.</span></span></p>
+    <div class="role"><span class="lbl" style="margin:0"><span class="de">meine rolle</span><span class="en">my role</span></span><p><span class="de">Brand Sprint vor der Eröffnung, dazu Moodboard für Farben und Ladengestaltung, Shooting und Typo.</span><span class="en">Brand sprint before the opening, plus a moodboard for colours and shop design, shoot and type.</span></p></div>
   </div>
 
-  <div class="sub">
+  <details class="foot" id="more-social-bagel-club">
+    <summary><span class="pl" aria-hidden="true">+</span><span class="de">mehr zum projekt</span><span class="en">more about the project</span></summary>
+    <div class="panel">
+      <div class="ctx solo"><div><span class="lbl"><span class="de">ausgangslage</span><span class="en">the starting point</span></span><p><span class="de">Ein neuer Bagelladen in Ulm stand kurz vor der Eröffnung und brauchte eine Marke, die vom ersten Tag an hängen bleibt.</span><span class="en">A new bagel shop in Ulm was about to open and needed a brand that sticks from day one.</span></p></div></div>
+      <div class="did"><span class="lbl"><span class="de">was ich gemacht habe</span><span class="en">what i did</span></span><ol class="de"><li>Brand Sprint: Positionierung und Markenkern</li><li>Moodboard für Farben und Ladengestaltung</li><li>Shooting zur Eröffnung</li><li>Typo und Posts für Instagram</li></ol><ol class="en"><li>Brand sprint: positioning and brand core</li><li>Moodboard for colours and shop design</li><li>Shoot for the opening</li><li>Type and posts for Instagram</li></ol></div>
+      <div class="core"><span class="lbl"><span class="de">die kernidee</span><span class="en">the core idea</span></span><q><span class="de">Ein Laden, der schon vor der Eröffnung Lust macht. Der Brand Sprint gab die Richtung vor, die Posts haben sie sichtbar gemacht.</span><span class="en">A shop that makes people hungry before it even opens. The brand sprint set the direction, the posts made it visible.</span></q></div>
+    </div>
+  </details>
+</div></section>
+
+<section class="sprint-sec band"><div class="wrap">
+  <div class="sprint-card">
     <span class="lbl" style="margin:0"><span class="de">so läuft ein brand sprint</span><span class="en">how a brand sprint works</span></span>
-    <p class="lead-q"><span class="de">Erst die Frage, dann die Farbe: Wofür soll die Marke stehen?</span><span class="en">First the question, then the colour: what should the brand stand for?</span></p>
+    <h3 class="d"><span class="de">Erst die Frage, dann die Farbe: Wofür soll die Marke stehen?</span><span class="en">First the question, then the colour: what should the brand stand for?</span></h3>
     <div class="did sprint">
       <ol class="de"><li><span><b>Positionierung:</b> Für wen ist die Marke da und was macht sie anders?</span></li><li><span><b>Markenkern und Tonalität:</b> Wie klingt sie und was sagt sie nie?</span></li><li><span><b>Fahrplan:</b> Content-Säulen und 90 Tage, die wichtigsten Baustellen in Reihenfolge.</span></li></ol>
       <ol class="en"><li><span><b>Positioning:</b> Who is the brand for, and what makes it different?</span></li><li><span><b>Brand core and tone of voice:</b> How does it sound, and what would it never say?</span></li><li><span><b>Roadmap:</b> Content pillars and 90 days, the most important tasks in order.</span></li></ol>
     </div>
+    <a class="offer" href="leistungen.html#branding-positionierung"><span class="de">mehr über branding &amp; positionierung</span><span class="en">more about branding &amp; positioning</span><span class="ar">→</span></a>
   </div>
-  <a class="offer" href="leistungen.html#branding-positionierung"><span class="de">mehr über branding &amp; positionierung</span><span class="en">more about branding &amp; positioning</span><span class="ar">→</span></a>
 </div></section>
 
 <section class="cta"><div class="wrap">
