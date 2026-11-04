@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Landingpage Briefing | interior coffee</title>
+<link rel="icon" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<style>
+/* Layout: ruhige Leinwand in Linen, links die Kapitel als Inhaltsverzeichnis, rechts der Fragebogen. Eine Farbe trägt, Coffee setzt Akzente. */
+@font-face{font-family:"Classico";src:url("../assets/fonts/classico-bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("../assets/fonts/dm-sans-latin-ext.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"DM Sans";src:url("../assets/fonts/dm-sans-latin.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{
+  --linen:#ECEBE3; --linen-soft:#F3F2EC; --white:#FFFFFF;
+  --ink:#1C1C1C; --ink-70:rgba(28,28,28,.70); --ink-50:rgba(28,28,28,.50); --ink-12:rgba(28,28,28,.12); --ink-06:rgba(28,28,28,.06);
+  --coffee:#492F27; --olive:#4E4E3D; --on-dark:#ECEBE3;
+  --display:"Classico", Georgia, "Times New Roman", serif;
+  --sans:"DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius-md:10px; --radius-lg:16px; --radius-pill:999px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--linen);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.gutter{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:1180px;margin:0 auto}
+:focus-visible{outline:2px solid var(--coffee);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:700;text-transform:lowercase;letter-spacing:-.01em;line-height:1.05;margin:0;text-wrap:balance}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-50)}
+
+/* Kopf */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:rgba(236,235,227,.92)}
+.top{position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;background:rgba(236,235,227,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--ink-12)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand svg{height:20px;width:auto;flex:none}
+.brand span{font-size:13px;color:var(--ink-70);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mode{display:flex;background:var(--ink-06);border-radius:var(--radius-pill);padding:3px;flex:none}
+.mode button{font:600 12px/1 var(--sans);text-transform:lowercase;border:0;background:transparent;color:var(--ink-70);padding:9px 14px;border-radius:var(--radius-pill);cursor:pointer}
+.mode button[aria-pressed="true"]{background:var(--ink);color:var(--on-dark)}
+
+/* Intro */
+.intro{padding-block:56px 36px}
+.intro .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+.intro h1{font-size:clamp(40px,7vw,80px)}
+.intro p{margin:0;color:var(--ink-70);max-width:52ch}
+.intro .facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:18px;font-size:14px;color:var(--ink-70)}
+.intro .facts b{font-family:var(--display);font-size:28px;color:var(--ink);display:block;line-height:1}
+.talknote{display:none;margin-top:18px;background:var(--olive);color:var(--on-dark);border-radius:var(--radius-lg);padding:16px 18px;font-size:14px}
+body.mode-talk .talknote{display:block}
+@media(max-width:820px){.intro .wrap{grid-template-columns:1fr;gap:20px}}
+
+/* Gerüst */
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;padding-block:8px 96px}
+.toc{position:sticky;top:90px;align-self:start;min-width:0}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:2px}
+.toc a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--ink-70);font-size:14px;padding:8px 12px;border-radius:var(--radius-md)}
+.toc a:hover{background:var(--ink-06);color:var(--ink)}
+.toc a.active{background:var(--white);color:var(--ink);box-shadow:0 1px 0 var(--ink-12)}
+.toc .n{font-variant-numeric:tabular-nums;color:var(--ink-50);font-size:12px}
+.toc .done .n{color:var(--coffee);font-weight:700}
+.bar{height:4px;background:var(--ink-12);border-radius:4px;overflow:hidden;margin-top:18px}
+.bar i{display:block;height:100%;width:0;background:var(--coffee);transition:width .42s ease}
+.progress-label{font-size:12px;color:var(--ink-50);margin-top:8px}
+@media(max-width:900px){.layout{grid-template-columns:1fr;gap:24px}.toc{position:static}.toc ol{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:4px}.toc a{white-space:nowrap;background:var(--ink-06)}}
+
+/* Kapitel */
+.chapter{background:var(--white);border:1px solid var(--ink-12);border-radius:var(--radius-lg);padding:36px 36px 30px;margin-bottom:22px;scroll-margin-top:96px}
+.chapter header{display:flex;gap:16px;align-items:baseline;margin-bottom:6px}
+.chapter header .num{font-family:var(--display);font-size:20px;color:var(--coffee)}
+.chapter h2{font-size:clamp(28px,3.4vw,40px)}
+.chapter .why{color:var(--ink-70);margin:6px 0 24px;max-width:62ch}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.field{margin-bottom:20px;min-width:0}
+.field.full{grid-column:1/-1}
+label.l{display:block;font-weight:600;font-size:15px;margin-bottom:4px}
+.req{color:var(--coffee)}
+.hint{font-size:13px;color:var(--ink-50);margin:0 0 8px}
+.talk{display:none;font-size:13px;background:var(--linen-soft);border-left:0;border-radius:var(--radius-md);padding:8px 12px;margin:0 0 8px;color:var(--olive)}
+.talk b{font-weight:700}
+body.mode-talk .talk{display:block}
+input[type=text],input[type=email],input[type=url],input[type=date],textarea,select{width:100%;font:400 15px/1.5 var(--sans);color:var(--ink);background:var(--linen-soft);border:1px solid var(--ink-12);border-radius:var(--radius-md);padding:12px 14px}
+textarea{min-height:96px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--coffee);background:var(--white)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:inline-flex;align-items:center;gap:8px;font-size:14px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid var(--ink-12);background:var(--linen-soft);cursor:pointer;text-transform:lowercase}
+.chips input{accent-color:var(--coffee);margin:0}
+.chips label:has(input:checked){background:var(--ink);color:var(--on-dark);border-color:var(--ink)}
+.colors{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.color{display:flex;align-items:center;gap:8px;background:var(--linen-soft);border:1px solid var(--ink-12);border-radius:var(--radius-md);padding:6px 10px}
+.color input[type=color]{width:34px;height:34px;border:0;padding:0;background:none;cursor:pointer;flex:none}
+.color input[type=text]{border:0;background:transparent;padding:6px 0;font-variant-numeric:tabular-nums}
+.persona{border:1px solid var(--ink-12);border-radius:var(--radius-md);padding:18px 18px 4px;margin-bottom:14px;background:var(--linen-soft)}
+.persona h3{font-size:22px;margin-bottom:12px}
+.persona .field input,.persona .field textarea{background:var(--white)}
+.nav-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px;padding-top:18px;border-top:1px solid var(--ink-12);flex-wrap:wrap}
+.saved{font-size:13px;color:var(--ink-50)}
+.btn{font:600 14px/1 var(--sans);text-transform:lowercase;border:0;border-radius:var(--radius-md);padding:14px 22px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-dark{background:var(--ink);color:var(--on-dark)}
+.btn-coffee{background:var(--coffee);color:var(--on-dark)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink-12)}
+.btn:hover{opacity:.82}
+@media(max-width:640px){.chapter{padding:26px 18px 22px}.grid2{grid-template-columns:1fr}}
+
+/* Abschluss */
+.finish{background:var(--ink);color:var(--on-dark);border-radius:var(--radius-lg);padding:40px 36px;scroll-margin-top:96px}
+.finish h2{font-size:clamp(30px,4vw,48px);margin-bottom:10px}
+.finish p{color:rgba(236,235,227,.75);max-width:60ch;margin:0 0 18px}
+.finish .btn-light{background:var(--linen);color:var(--ink)}
+.finish .row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.finish .mail{font-family:var(--display);font-size:24px;color:var(--linen);user-select:all}
+.missing{background:rgba(236,235,227,.08);border-radius:var(--radius-md);padding:12px 16px;font-size:14px;margin-bottom:18px}
+.missing[hidden]{display:none}
+pre.out{white-space:pre-wrap;background:rgba(236,235,227,.06);border:1px solid rgba(236,235,227,.14);border-radius:var(--radius-md);padding:16px;font:13px/1.55 ui-monospace,Menlo,monospace;max-height:340px;overflow:auto;color:var(--on-dark)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom, 0px));transform:translateX(-50%) translateY(20px);background:var(--coffee);color:var(--on-dark);padding:12px 18px;border-radius:var(--radius-md);font-size:14px;opacity:0;transition:opacity .24s ease,transform .24s ease;pointer-events:none;z-index:30}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+footer{padding-block:0 48px;font-size:13px;color:var(--ink-50)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--ink-12);padding-top:20px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(236,235,227,.85);margin:0 0 18px}
+.consent input{width:18px;height:18px;margin-top:3px;accent-color:var(--linen);flex:none}
+.consent a{color:var(--linen)}
+.sent{display:none}
+.sent.show{display:block}
+.err-box{background:rgba(236,235,227,.1);border-radius:var(--radius-md);padding:12px 16px;font-size:14px;margin-bottom:18px}
+.btn[disabled]{opacity:.5;cursor:wait}
+</style>
+</head>
+<body>
+
+<div class="top gutter">
+  <div class="wrap">
+    <div class="brand"><a href="../index.html" aria-label="interior coffee Startseite"><img src="../assets/wordmark.svg" alt="interior coffee" style="height:20px;width:auto;display:block"></a><span>briefing für deine landingpage</span></div>
+    <div class="mode" role="group" aria-label="Modus">
+      <button type="button" id="m-self" aria-pressed="true">ich fülle aus</button>
+      <button type="button" id="m-talk" aria-pressed="false">gesprächsmodus</button>
+    </div>
+  </div>
+</div>
+
+<section class="intro gutter">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">landingpage briefing</p>
+      <h1>erzähl mir von deiner marke</h1>
+    </div>
+    <div>
+      <p>Mit diesen Fragen baue ich deine Landingpage. Je konkreter du antwortest, desto schneller steht der erste Entwurf. Was du noch nicht weißt, lässt du einfach frei, das klären wir gemeinsam.</p>
+      <div class="facts"><div><b>9</b>kapitel</div><div><b>20</b>minuten</div><div><b id="f-count">0</b>antworten</div></div>
+      <div class="talknote">Gesprächsmodus aktiv: Unter jeder Frage stehen Nachfragen für das Kickoff. Deine Notizen landen in denselben Feldern.</div>
+    </div>
+  </div>
+</section>
+
+<div class="gutter">
+  <div class="wrap layout">
+    <aside class="toc" aria-label="Kapitel">
+      <p class="eyebrow">kapitel</p>
+      <ol id="toc"></ol>
+      <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+      <p class="progress-label" id="plabel">0 von 0 Pflichtfeldern</p>
+    </aside>
+    <form id="form" novalidate>
+      <div id="chapters"></div>
+      <section class="finish" id="abschluss" aria-labelledby="fin-title">
+        <div id="send-area">
+        <p class="eyebrow" style="color:rgba(236,235,227,.6)">abschluss</p>
+        <h2 id="fin-title">briefing fertig? dann ab damit</h2>
+        <p>Mit einem Klick landet dein Briefing direkt bei mir. Logo, Schriften und Bilder schickst du mir danach per Mail oder als Link im Kapitel Branding Paket.</p>
+        <div class="missing" id="missing" hidden></div>
+        <label class="hp" aria-hidden="true">Fax<input type="text" id="fax" tabindex="-1" autocomplete="off"></label>
+        <label class="consent"><input type="checkbox" id="consent"><span>Ich bin einverstanden, dass interior coffee meine Angaben zur Bearbeitung meiner Anfrage verarbeitet. Mehr dazu in der <a href="../datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span></label>
+        <div class="err-box" id="err" hidden></div>
+        <div class="row">
+          <button type="button" class="btn btn-light" id="send">briefing absenden</button>
+          <button type="button" class="btn btn-ghost" style="color:var(--on-dark);box-shadow:inset 0 0 0 1px rgba(236,235,227,.3)" id="save">als datei speichern</button>
+          <button type="button" class="btn btn-ghost" style="color:var(--on-dark);box-shadow:inset 0 0 0 1px rgba(236,235,227,.3)" id="copy">text kopieren</button>
+        </div>
+        <pre class="out" id="out" hidden></pre>
+        </div>
+        <div class="sent" id="sent" role="status">
+          <p class="eyebrow" style="color:rgba(236,235,227,.6)">angekommen</p>
+          <h2>danke, dein briefing ist bei mir</h2>
+          <p>Ich lese es mir in Ruhe durch und melde mich innerhalb von zwei Werktagen mit Rückfragen oder einem Termin für den ersten Entwurf.</p>
+          <p class="mail">hello@interior-coffee.com</p>
+        </div>
+      </section>
+    </form>
+  </div>
+</div>
+
+<footer class="gutter"><div class="wrap"><span>interior coffee · Jenny Kluth · München</span><span><a href="../impressum.html" style="color:inherit">Impressum</a> · <a href="../datenschutz.html" style="color:inherit">Datenschutz</a></span></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ===== Der Fragenkatalog. t: text, a: textarea, s: select, c: mehrfachauswahl, colors, personas ===== */
+const CH = [
+ {id:"marke", title:"du und deine marke", why:"Damit ich verstehe, wer hinter der Seite steht und wofür ihr bekannt sein wollt.", fields:[
+  {id:"firma", l:"Name der Marke oder des Unternehmens", t:"t", req:1},
+  {id:"name", l:"Dein Name", t:"t", req:1, ph:"Vorname Nachname"},
+  {id:"email", l:"Deine E-Mail", t:"email", req:1, ph:"name@firma.de"},
+  {id:"website", l:"Bestehende Website oder Social-Media-Profil", t:"url", full:1, ph:"https://"},
+  {id:"pitch", l:"Was macht ihr in einem Satz?", t:"a", req:1, full:1, h:"So, wie du es auf einer Party erklären würdest.", talk:"Woran merkt ein Kunde, dass er bei euch richtig ist? Was sagt ihr nie über euch?"},
+  {id:"werte", l:"Drei Worte, die eure Marke beschreiben", t:"t", full:1, ph:"zum Beispiel ruhig, präzise, warm"}
+ ]},
+ {id:"ziel", title:"ziel der seite", why:"Eine Landingpage hat eine Aufgabe. Alles auf der Seite arbeitet darauf hin.", fields:[
+  {id:"anlass", l:"Worum geht es auf der Seite?", t:"s", req:1, o:["Neues Produkt oder Feature","Coming soon oder Vorankündigung","Event oder Workshop","Dienstleistung oder Angebot","Kampagne oder Aktion","Etwas anderes"]},
+  {id:"anlass_detail", l:"Beschreib das Angebot genauer", t:"a", req:1, full:1, h:"Was genau, ab wann, für wen, zu welchem Preis, falls schon bekannt.", talk:"Was ist neu oder anders als bisher? Gibt es Termine, die feststehen?"},
+  {id:"aktion", l:"Was soll ein Besucher am Ende tun?", t:"c", req:1, full:1, o:["Kontakt aufnehmen","Termin buchen","Newsletter abonnieren","Kaufen oder vorbestellen","Ticket buchen","Warteliste","Datei herunterladen"]},
+  {id:"erfolg", l:"Woran misst du, dass die Seite funktioniert?", t:"t", full:1, ph:"zum Beispiel 50 Anmeldungen bis März", talk:"Gibt es eine Zahl, die du deinem Chef oder dir selbst zeigen willst?"}
+ ]},
+ {id:"zielgruppen", title:"zielgruppen", why:"Ich schreibe für Menschen, nicht für Märkte. Bis zu drei Personen reichen.", personas:3},
+ {id:"botschaft", title:"botschaft und inhalte", why:"Das Material für die Texte. Stichpunkte reichen völlig.", fields:[
+  {id:"kern", l:"Die wichtigste Botschaft", t:"a", req:1, full:1, h:"Wenn Besucher nur einen Satz behalten, welcher soll es sein?"},
+  {id:"nutzen", l:"Die drei bis fünf stärksten Gründe für euch", t:"a", req:1, full:1, h:"Features, Leistungen, Vorteile. Gern mit Zahlen.", talk:"Welcher Grund überzeugt im Verkaufsgespräch am häufigsten? Welcher wird überschätzt?"},
+  {id:"belege", l:"Belege und Vertrauen", t:"a", full:1, h:"Zahlen, Auszeichnungen, Logos von Kunden, Kundenstimmen mit Freigabe. Bitte ohne Namen oder Kontaktdaten von Privatpersonen."},
+  {id:"ablauf", l:"Wie läuft es ab, wenn jemand Kunde wird?", t:"a", full:1, ph:"Schritt 1, Schritt 2, Schritt 3"},
+  {id:"preise", l:"Sollen Preise sichtbar sein?", t:"s", o:["Ja, konkrete Preise","Ab-Preise","Nein, auf Anfrage","Noch offen"]},
+  {id:"termine", l:"Wichtige Termine", t:"t", ph:"Launch, Eventdatum, Anmeldeschluss"},
+  {id:"faq", l:"Fragen, die Kunden immer wieder stellen", t:"a", full:1}
+ ]},
+ {id:"design", title:"branding paket", why:"So bleibt die Seite unverkennbar eure. Hast du einen Brand Guide, reicht oft ein Link.", fields:[
+  {id:"guide", l:"Link zu Brand Guide, Logo und Schriften", t:"url", full:1, h:"Google Drive, Dropbox oder WeTransfer. Alternativ hängst du die Dateien an die Mail.", ph:"https://"},
+  {id:"farben", l:"Markenfarben", t:"colors", full:1, h:"Hauptfarbe zuerst. Hexwerte aus dem Brand Guide, falls vorhanden."},
+  {id:"schriften", l:"Schriften", t:"t", full:1, ph:"Headline: ..., Fließtext: ...", h:"Name der Schrift und ob ihr eine Lizenz fürs Web habt."},
+  {id:"bilder", l:"Bildmaterial", t:"s", o:["Eigene Fotos sind vorhanden","Wir brauchen neue Bilder","KI-Visuals im Markenlook","Noch offen"], talk:"Dürfen Menschen gezeigt werden? Gibt es ein Shooting, das wir nutzen können?"},
+  {id:"bildwelt", l:"Wie sieht eure Bildwelt aus?", t:"a", h:"Licht, Farben, Stimmung, was nie vorkommen darf."},
+  {id:"ton", l:"Ansprache", t:"s", o:["du","Sie","egal"]},
+  {id:"nogos", l:"No-Gos in Text und Gestaltung", t:"a", full:1, ph:"Wörter, Farben, Motive, die nicht passen"}
+ ]},
+ {id:"vorbilder", title:"vorbilder", why:"Zwei, drei Seiten, die dir gefallen, sparen uns eine Korrekturschleife.", fields:[
+  {id:"ref1", l:"Referenz 1 und was dir daran gefällt", t:"a", full:1, ph:"https://... gefällt mir, weil ..."},
+  {id:"ref2", l:"Referenz 2", t:"a", full:1},
+  {id:"wettbewerb", l:"Wettbewerber, von denen ihr euch abheben wollt", t:"a", full:1, talk:"Was machen die besser als ihr? Wo seid ihr eindeutig stärker?"}
+ ]},
+ {id:"formular", title:"formular und kontakt", why:"Damit Anfragen dort ankommen, wo jemand sie liest.", fields:[
+  {id:"felder", l:"Welche Angaben soll das Formular abfragen?", t:"c", full:1, o:["Name","E-Mail","Telefon","Unternehmen","Rolle","Nachricht","Budget","Wunschtermin"]},
+  {id:"empfang", l:"Wohin sollen Anfragen gehen?", t:"t", full:1, h:"E-Mail-Adresse, CRM oder Newsletter-Tool, zum Beispiel Mailchimp oder HubSpot."},
+  {id:"danke", l:"Was passiert nach dem Absenden?", t:"t", full:1, ph:"zum Beispiel Antwort innerhalb von zwei Werktagen"}
+ ]},
+ {id:"technik", title:"technik und rechtliches", why:"Die unspektakulären Fragen, an denen ein Launch sonst hängen bleibt.", fields:[
+  {id:"domain", l:"Unter welcher Adresse soll die Seite laufen?", t:"t", ph:"neu.firma.de oder firma.de/aktion"},
+  {id:"hosting", l:"Wer hostet die Seite?", t:"s", o:["Wir haben Hosting und eine IT","Ihr sollt das übernehmen","Weiß ich nicht"], talk:"WordPress, Webflow, Shopify oder statisch? Wer hat Zugang?"},
+  {id:"sprachen", l:"Sprachen", t:"c", o:["Deutsch","Englisch","Weitere"]},
+  {id:"recht", l:"Links zu Impressum und Datenschutz", t:"t", full:1, h:"Rechtstexte schreibe ich nicht selbst, ich verlinke eure."},
+  {id:"tracking", l:"Analyse und Tracking", t:"s", o:["Keins","Google Analytics","Matomo oder Plausible","Meta Pixel","Noch offen"]}
+ ]},
+ {id:"zeit", title:"zeitplan und budget", why:"Damit wir realistisch planen.", fields:[
+  {id:"deadline", l:"Bis wann soll die Seite online sein?", t:"date", req:1},
+  {id:"budget", l:"Budgetrahmen", t:"s", o:["bis 1.500 €","1.500 bis 3.000 €","3.000 bis 6.000 €","über 6.000 €","Noch offen"]},
+  {id:"freigabe", l:"Wer gibt den Entwurf frei?", t:"t", ph:"Rolle, zum Beispiel Geschäftsführung"},
+  {id:"sonst", l:"Was sollte ich sonst noch wissen?", t:"a", full:1}
+ ]}
+];
+const PF = [
+ {id:"rolle", l:"Wer ist diese Person?", t:"t", ph:"zum Beispiel Inhaberin eines Cafés, 45"},
+ {id:"problem", l:"Was ist ihr Problem oder Wunsch?", t:"a"},
+ {id:"einwand", l:"Was hält sie vom Kaufen ab?", t:"a"},
+ {id:"ueberzeugt", l:"Was überzeugt sie?", t:"a"}
+];
+
+/* ===== Speicher (nur dieser Browser) ===== */
+const KEY="ic-landingpage-briefing-v1";
+let S={};
+try{S=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){S={}}
+const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function fieldHTML(f,prefix=""){
+  const id=prefix+f.id, v=S[id];
+  const head=`<label class="l" for="${id}">${esc(f.l)}${f.req?' <span class="req" aria-hidden="true">*</span>':''}</label>${f.h?`<p class="hint">${esc(f.h)}</p>`:''}${f.talk?`<p class="talk"><b>nachfragen:</b> ${esc(f.talk)}</p>`:''}`;
+  let inp="";
+  if(f.t==="a") inp=`<textarea id="${id}" data-k="${id}" placeholder="${esc(f.ph||"")}">${esc(v||"")}</textarea>`;
+  else if(f.t==="s") inp=`<select id="${id}" data-k="${id}"><option value="">bitte wählen</option>${f.o.map(o=>`<option${v===o?" selected":""}>${esc(o)}</option>`).join("")}</select>`;
+  else if(f.t==="c") inp=`<div class="chips" id="${id}" role="group" aria-label="${esc(f.l)}">${f.o.map((o,i)=>`<label><input type="checkbox" data-k="${id}" value="${esc(o)}" id="${id}-${i}"${(v||[]).includes(o)?" checked":""}>${esc(o)}</label>`).join("")}</div>`;
+  else if(f.t==="colors"){const c=v||["","","",""];inp=`<div class="colors" id="${id}">${c.map((x,i)=>`<div class="color"><input type="color" aria-label="Farbe ${i+1} wählen" data-ci="${i}" value="${/^#[0-9a-f]{6}$/i.test(x)?x:"#ecebe3"}"><input type="text" aria-label="Farbe ${i+1} als Hexwert" id="${id}-${i}" data-ct="${i}" value="${esc(x)}" placeholder="#hex"></div>`).join("")}</div>`}
+  else {const type=f.t==="url"?"url":f.t==="date"?"date":f.t==="email"?"email":"text";inp=`<input type="${type}" id="${id}" data-k="${id}" value="${esc(v||"")}" placeholder="${esc(f.ph||"")}">`}
+  return `<div class="field${f.full?" full":""}" data-req="${f.req?1:0}" data-f="${id}">${head}${inp}</div>`;
+}
+function render(){
+  document.getElementById("chapters").innerHTML=CH.map((c,i)=>{
+    let body;
+    if(c.personas){
+      body=[1,2,3].map(n=>`<div class="persona"><h3>person ${n}${n===1?' <span class="req" style="font-family:var(--sans);font-size:14px">*</span>':''}</h3><div class="grid2">${PF.map(f=>fieldHTML({...f,full:f.t==="a"?0:1,req:n===1&&f.id==="rolle"?1:0},`p${n}_`)).join("")}</div></div>`).join("")+`<p class="talk"><b>nachfragen:</b> Wer entscheidet, wer bezahlt, wer nutzt? Wo informiert sich diese Person?</p>`;
+    } else body=`<div class="grid2">${c.fields.map(f=>fieldHTML(f)).join("")}</div>`;
+    const next=CH[i+1]?`<a class="btn btn-dark" href="#${CH[i+1].id}">weiter zu ${CH[i+1].title}</a>`:`<a class="btn btn-coffee" href="#abschluss">zum abschluss</a>`;
+    return `<section class="chapter" id="${c.id}" aria-labelledby="h-${c.id}"><header><span class="num">${String(i+1).padStart(2,"0")}</span><h2 id="h-${c.id}">${c.title}</h2></header><p class="why">${esc(c.why)}</p>${body}<div class="nav-row"><span class="saved">wird automatisch in diesem Browser gespeichert</span>${next}</div></section>`;
+  }).join("");
+  document.getElementById("toc").innerHTML=CH.map((c,i)=>`<li><a href="#${c.id}" data-c="${c.id}"><span>${c.title}</span><span class="n">${String(i+1).padStart(2,"0")}</span></a></li>`).join("")+`<li><a href="#abschluss" data-c="abschluss"><span>abschluss</span><span class="n">→</span></a></li>`;
+}
+render();
+
+/* ===== Eingaben erfassen ===== */
+const form=document.getElementById("form");
+form.addEventListener("input",e=>{
+  const el=e.target;
+  if(el.dataset.ci!==undefined||el.dataset.ct!==undefined){
+    const box=el.closest(".colors"), id=box.id, i=+(el.dataset.ci??el.dataset.ct);
+    const arr=S[id]||["","","",""];
+    if(el.type==="color"){arr[i]=el.value;box.querySelector(`[data-ct="${i}"]`).value=el.value}
+    else{arr[i]=el.value.trim();if(/^#[0-9a-f]{6}$/i.test(arr[i]))box.querySelector(`[data-ci="${i}"]`).value=arr[i]}
+    S[id]=arr;
+  } else if(el.type==="checkbox"){
+    const k=el.dataset.k;S[k]=[...form.querySelectorAll(`input[data-k="${k}"]:checked`)].map(x=>x.value);
+  } else if(el.dataset.k){S[el.dataset.k]=el.value}
+  persist();progress();
+});
+form.addEventListener("submit",e=>e.preventDefault());
+
+const filled=k=>{const v=S[k];return Array.isArray(v)?v.some(x=>x):!!(v&&String(v).trim())};
+function progress(){
+  const req=[...document.querySelectorAll('.field[data-req="1"]')].map(f=>f.dataset.f);
+  const done=req.filter(filled).length;
+  document.getElementById("bar").style.width=(req.length?done/req.length*100:0)+"%";
+  document.getElementById("plabel").textContent=`${done} von ${req.length} Pflichtfeldern`;
+  document.getElementById("f-count").textContent=Object.keys(S).filter(filled).length;
+  CH.forEach(c=>{const fs=[...document.querySelectorAll(`#${c.id} .field[data-f]`)].map(f=>f.dataset.f);const a=document.querySelector(`.toc a[data-c="${c.id}"]`);a.parentElement.classList.toggle("done",fs.some(filled))});
+}
+progress();
+
+/* Aktives Kapitel im Inhaltsverzeichnis */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll(".toc a").forEach(a=>a.classList.toggle("active",a.dataset.c===e.target.id))}}),{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll(".chapter,.finish").forEach(s=>io.observe(s));
+
+/* Modus */
+const mSelf=document.getElementById("m-self"),mTalk=document.getElementById("m-talk");
+function setMode(t){document.body.classList.toggle("mode-talk",t);mSelf.setAttribute("aria-pressed",!t);mTalk.setAttribute("aria-pressed",t);S._mode=t?"gespräch":"selbst";persist()}
+mSelf.onclick=()=>setMode(false);mTalk.onclick=()=>setMode(true);
+setMode(S._mode==="gespräch");
+
+/* ===== Briefing als Markdown und HTML ===== */
+function val(k){const v=S[k];if(Array.isArray(v)){const a=v.filter(Boolean);return a.length?a.join(", "):""}return (v||"").trim()}
+function collect(){
+  const out=[];
+  CH.forEach((c,i)=>{
+    const sec={title:`${i+1}. ${c.title}`,items:[],subs:[]};
+    if(c.personas){[1,2,3].forEach(n=>{if(!PF.some(f=>filled(`p${n}_${f.id}`)))return;sec.subs.push({title:`Person ${n}`,items:PF.map(f=>[f.l,val(`p${n}_${f.id}`)])})})}
+    else c.fields.forEach(f=>sec.items.push([f.l,val(f.id)]));
+    out.push(sec);
+  });
+  return out;
+}
+const meta=()=>`Eingegangen am ${new Date().toLocaleDateString("de-DE")} · ${S._mode==="gespräch"?"Kickoff-Gespräch":"vom Kunden ausgefüllt"}`;
+function toMarkdown(){
+  let md=`# Landingpage Briefing: ${val("firma")||"ohne Namen"}\n\n${meta()}\n`;
+  collect().forEach(s=>{md+=`\n## ${s.title}\n`;s.items.forEach(([l,v])=>md+=`\n**${l}**\n${v||"(offen)"}\n`);s.subs.forEach(p=>{md+=`\n### ${p.title}\n`;p.items.forEach(([l,v])=>md+=`- **${l}** ${v||"(offen)"}\n`)});if(!s.items.length&&!s.subs.length)md+="(offen)\n"});
+  return md;
+}
+const nl=v=>esc(v).replace(/\n/g,"<br>");
+function toHTML(){
+  let h=`<h1>Landingpage Briefing: ${esc(val("firma")||"ohne Namen")}</h1><p>${esc(meta())}</p>`;
+  collect().forEach(s=>{h+=`<h2>${esc(s.title)}</h2>`;s.items.forEach(([l,v])=>h+=`<p><strong>${esc(l)}</strong><br>${v?nl(v):"<em>(offen)</em>"}</p>`);s.subs.forEach(p=>{h+=`<h3>${esc(p.title)}</h3><ul>`+p.items.map(([l,v])=>`<li><strong>${esc(l)}</strong> ${v?nl(v):"<em>(offen)</em>"}</li>`).join("")+"</ul>"});if(!s.items.length&&!s.subs.length)h+="<p><em>(offen)</em></p>"});
+  return h;
+}
+function openList(){return [...document.querySelectorAll('.field[data-req="1"]')].filter(f=>!filled(f.dataset.f)).map(f=>f.querySelector("label.l").textContent.replace("*","").trim())}
+function missing(){
+  const req=openList();const box=document.getElementById("missing");
+  if(req.length){box.hidden=false;box.innerHTML=`Noch offen, aber kein Problem, das klären wir gemeinsam: ${req.map(esc).join(" · ")}`}else box.hidden=true;
+}
+const toast=m=>{const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("show"),2600)};
+const slug=s=>(s||"marke").toLowerCase().replace(/[^a-z0-9äöüß]+/g,"-").replace(/^-|-$/g,"")||"marke";
+const showOut=()=>{const o=document.getElementById("out");o.textContent=toMarkdown();o.hidden=false;return o};
+
+document.getElementById("copy").onclick=async()=>{
+  missing();const o=showOut();
+  try{await navigator.clipboard.writeText(o.textContent);toast("Briefing kopiert.")}
+  catch(e){const r=document.createRange();r.selectNodeContents(o);const s=getSelection();s.removeAllRanges();s.addRange(r);toast("Text ist markiert. Mit Strg+C oder Cmd+C kopieren.")}
+};
+document.getElementById("save").onclick=()=>{
+  missing();const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([toMarkdown()],{type:"text/markdown"}));a.download=`briefing-${slug(val("firma"))}.md`;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);
+};
+
+/* ===== Absenden an Make (Webhook legt ein Google Doc an und benachrichtigt hello@) ===== */
+const WEBHOOK="https://hook.eu1.make.com/6lntif4cbsmg57lumod2cw9fxoentlop";
+document.getElementById("send").onclick=async()=>{
+  const err=document.getElementById("err");err.hidden=true;missing();
+  const must=["firma","name","email"].filter(k=>!filled(k));
+  if(must.length){err.hidden=false;err.textContent="Damit ich dir antworten kann, brauche ich mindestens Marke, Name und E-Mail aus Kapitel 1.";location.hash="marke";return}
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val("email"))){err.hidden=false;err.textContent="Die E-Mail-Adresse in Kapitel 1 sieht nicht vollständig aus.";return}
+  if(!document.getElementById("consent").checked){err.hidden=false;err.textContent="Bitte bestätige noch kurz die Einwilligung zur Datenverarbeitung.";return}
+  const btn=document.getElementById("send");btn.disabled=true;btn.textContent="wird gesendet";
+  const body=new URLSearchParams({firma:val("firma"),name:val("name"),email:val("email"),anlass:val("anlass"),deadline:val("deadline"),offen:openList().join(", "),html:toHTML(),markdown:toMarkdown()});
+  const fax=document.getElementById("fax").value;if(fax)body.set("fax",fax);
+  try{
+    const r=await fetch(WEBHOOK,{method:"POST",body});
+    if(!r.ok)throw new Error(r.status);
+    document.getElementById("send-area").hidden=true;document.getElementById("sent").classList.add("show");
+    try{localStorage.removeItem(KEY)}catch(e){}
+  }catch(e){
+    btn.disabled=false;btn.textContent="briefing absenden";err.hidden=false;
+    err.textContent="Das Senden hat gerade nicht geklappt. Speichere dein Briefing als Datei oder kopiere den Text und schick ihn an hello@interior-coffee.com.";
+  }
+};
+</script>
+</body>
+</html>
