@@ -49,7 +49,12 @@ a:hover .ic-work, a:focus-visible .ic-work { opacity: 1; transform: scale(1); }
 a:hover .ic-logo, a:focus-visible .ic-logo { opacity: 0; transform: scale(.94); }
 @media (hover: none) { .ic-work { opacity: 1; transform: none; } .ic-logo { opacity: 0; } }
 
+/* Zeilen mit Trennlinie (z. B. Leistungen): Titel rückt beim Hover leicht ein */
+.ic-row-title { transition: transform .4s cubic-bezier(.22,.61,.36,1); }
+.ic-row:hover .ic-row-title { transform: translateX(8px); }
+
 @media (prefers-reduced-motion: reduce) {
+  .ic-row-title { transition: none; } .ic-row:hover .ic-row-title { transform: none; }
   .ic-pre { opacity: 1; transform: none; }
   .ic-reveal, .ic-lift, .ic-zoom, .ic-arrow, .ic-btn, .ic-work, .ic-logo, .ic-head-cta, html.ic-hdr .ic-header, html.ic-hdr .ic-header > nav { transition: none; }
   .ic-lift:hover, .ic-btn:hover { transform: none; }
