@@ -1,0 +1,59 @@
+/* interior coffee · Bewegung: mitwandernder Header, Header-Button, Einblenden, Hover
+   Wird auf allen Seiten geladen. Ohne JavaScript bleibt alles statisch sichtbar. */
+
+/* 1 · Header: fest oben, verschwindet beim Runterscrollen, kommt beim Hochscrollen kompakt zurück */
+html.ic-hdr body { padding-top: var(--ic-hh, 0px); }
+html.ic-hdr .ic-header {
+  position: fixed !important; top: 0; left: 0; right: 0; z-index: 40;
+  transition: transform .45s cubic-bezier(.22,.61,.36,1), box-shadow .3s ease;
+}
+html.ic-hdr .ic-header > nav { transition: padding .35s cubic-bezier(.22,.61,.36,1); }
+html.ic-compact .ic-header { box-shadow: 0 6px 24px rgba(73,47,39,.06); }
+html.ic-compact .ic-header > nav { padding-top: 11px !important; padding-bottom: 11px !important; }
+html.ic-hide .ic-header { transform: translateY(-101%); }
+
+/* 2 · Button "let's brew something" im Header, erscheint nach dem ersten Bildschirm */
+.ic-head-cta {
+  display: inline-flex; align-items: center; white-space: nowrap; overflow: hidden;
+  max-width: 0; padding: 0; margin-left: calc(-1 * clamp(14px, 2.4vw, 30px)); opacity: 0; transform: translateX(8px); pointer-events: none;
+  border-radius: var(--radius-md, 8px); background: var(--ic-off-black, #1C1C1C); color: var(--ic-linen, #ECEBE3) !important;
+  font-family: var(--font-sans, "DM Sans", sans-serif); font-size: 13px; font-weight: 500; letter-spacing: .01em;
+  text-transform: lowercase; text-decoration: none; border-bottom: 0 !important;
+  transition: max-width .45s cubic-bezier(.22,.61,.36,1), margin .45s cubic-bezier(.22,.61,.36,1), padding .45s cubic-bezier(.22,.61,.36,1), opacity .3s ease, transform .45s cubic-bezier(.22,.61,.36,1);
+}
+html.ic-cta .ic-head-cta { max-width: 240px; padding: 9px 16px; margin-left: 0; opacity: 1; transform: none; pointer-events: auto; }
+html.ic-cta .ic-head-cta:hover { opacity: .85; }
+@media (max-width: 700px) { html.ic-cta .ic-head-cta { padding: 8px 12px; font-size: 12px; } }
+
+/* 3 · Einblenden beim Scrollen (nur Elemente, die beim Laden unterhalb des Bildschirms liegen) */
+.ic-pre { opacity: 0; transform: translateY(48px); }
+.ic-reveal { transition: opacity 1s cubic-bezier(.22,.61,.36,1), transform 1s cubic-bezier(.22,.61,.36,1); }
+
+/* 4 · Hover */
+.ic-lift { transition: transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s cubic-bezier(.22,.61,.36,1), background-color .35s ease; }
+.ic-lift:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(73,47,39,.12) !important; }
+.ic-zoom-wrap { overflow: hidden; }
+.ic-zoom { transition: transform .8s cubic-bezier(.22,.61,.36,1); }
+.ic-zoom-wrap:hover .ic-zoom, .ic-lift:hover .ic-zoom { transform: scale(1.05); }
+.ic-arrow { display: inline-block; transition: transform .25s cubic-bezier(.22,.61,.36,1); }
+a:hover .ic-arrow { transform: translateX(4px); }
+.ic-btn { transition: transform .25s cubic-bezier(.22,.61,.36,1), opacity .2s ease; }
+.ic-btn:hover { transform: translateY(-2px); }
+
+/* Projektkacheln: beim Hover erscheint ein Ergebnis statt des Logos */
+.ic-work-tile { position: relative; overflow: hidden; transition: background-color .35s ease; }
+.ic-work { position: absolute !important; inset: 0; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; object-fit: cover !important;
+  opacity: 0; transform: scale(1.08); transition: opacity .6s cubic-bezier(.22,.61,.36,1), transform 1.2s cubic-bezier(.22,.61,.36,1); }
+.ic-logo { position: relative; transition: opacity .4s ease, transform .6s cubic-bezier(.22,.61,.36,1); }
+a:hover .ic-work, a:focus-visible .ic-work { opacity: 1; transform: scale(1); }
+a:hover .ic-logo, a:focus-visible .ic-logo { opacity: 0; transform: scale(.94); }
+@media (hover: none) { .ic-work { opacity: 1; transform: none; } .ic-logo { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ic-pre { opacity: 1; transform: none; }
+  .ic-reveal, .ic-lift, .ic-zoom, .ic-arrow, .ic-btn, .ic-work, .ic-logo, .ic-head-cta, html.ic-hdr .ic-header, html.ic-hdr .ic-header > nav { transition: none; }
+  .ic-lift:hover, .ic-btn:hover { transform: none; }
+  .ic-zoom-wrap:hover .ic-zoom, .ic-lift:hover .ic-zoom { transform: none; }
+}
+
+.ic-service:hover { background: var(--ic-white, #fff) !important; }

@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/styles.css">
 <script src="_ds/interior-coffee-design-system-c725ea7c-1685-411d-8d5b-a23f03564fe8/_ds_bundle.js"></script>
 </helmet>
-<header style="position:sticky;top:0;z-index:40;background:rgba(236,235,227,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--ic-ink-12)">
+<header class="ic-header" style="position:sticky;top:0;z-index:40;background:rgba(236,235,227,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--ic-ink-12)">
   <nav style="max-width:1280px;margin:0 auto;padding:18px clamp(20px,5vw,32px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
     <a href="index.html" aria-label="interior coffee, Startseite" style="display:flex;align-items:center;gap:clamp(14px,1.8vw,22px);height:calc(clamp(24px,6vw,30px) * 1.4);text-decoration:none;flex-shrink:0">
       <img src="/assets/wordmark.svg" alt="interior coffee" width="5735" height="788" style="display:block;height:clamp(18.9px,4.72vw,23.6px);width:auto">
@@ -27,7 +27,8 @@
       <a href="projekte.html" style="font-family:var(--font-sans);font-size:14px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;text-decoration:none;color:{{ cWork }};padding-bottom:2px;border-bottom:1px solid {{ uWork }}" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">projekte</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">work</sc-if></a>
       <a href="ueber-mich.html" style="font-family:var(--font-sans);font-size:14px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;text-decoration:none;color:{{ cAbout }};padding-bottom:2px;border-bottom:1px solid {{ uAbout }}" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">über mich</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">about</sc-if></a>
       <a href="kontakt.html" style="font-family:var(--font-sans);font-size:14px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;text-decoration:none;color:{{ cContact }};padding-bottom:2px;border-bottom:1px solid {{ uContact }}" style-hover="opacity:0.7"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">kontakt</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">contact</sc-if></a>
-      <div style="display:flex;align-items:center;gap:7px;padding-left:clamp(10px,2vw,22px);border-left:1px solid var(--ic-ink-12)">
+      <a href="kontakt.html" class="ic-head-cta" tabindex="-1"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">let's brew something</sc-if><sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">let's brew something</sc-if></a>
+    <div style="display:flex;align-items:center;gap:7px;padding-left:clamp(10px,2vw,22px);border-left:1px solid var(--ic-ink-12)">
         <button type="button" onClick="{{ setDe }}" style="background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-sans);font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:{{ cDe }}">de</button>
         <span style="font-size:11px;color:var(--ic-ink-30)">·</span>
         <button type="button" onClick="{{ setEn }}" style="background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-sans);font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:{{ cEn }}">en</button>
