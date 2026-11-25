@@ -18,6 +18,7 @@ Marketing. Branding. Content. Freshly brewed for lifestyle labels.
 | `impressum.html` | Impressum (DE/EN) |
 | `datenschutz.html` | Datenschutzerklärung (DE/EN) |
 | `assets/` | Logos und Bilder |
+| `bimi-logo.svg` | Logo für BIMI (Absenderlogo in E-Mails), SVG Tiny PS, muss unter https://www.interior-coffee.com/bimi-logo.svg erreichbar bleiben |
 
 Bilder, Schriften und Scripts der Seiten liegen als eigene Dateien in `assets/build/`. Die Dateinamen enthalten einen Fingerabdruck (z. B. `img.5694a47eb9.webp`), damit Browser sie dauerhaft zwischenspeichern und nach einem Update automatisch die neue Version laden. Der Ordner `assets/` muss komplett mit hochgeladen werden.
 
